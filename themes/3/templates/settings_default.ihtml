@@ -1,0 +1,19 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_settings.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class=bodyText>{lang_settings_default_info}</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

@@ -1,0 +1,126 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_server.gif"><img src="themes/{theme_id}/images/title_&_details.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN ServerBlock --> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td colspan=2 class=titleText>{name}</td> 
+              </tr> 
+            </table> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td width="1"><img src="{map_image}" width="212" height="160"></td> 
+                <td valign="top"> <!-- BEGIN Details --> 
+                  <table border="0" cellspacing="0" cellpadding="3"> 
+                    <tr> 
+                      <td class=titleText>{lang_players}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{players}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText>{lang_map}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{map}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText>{lang_ping}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{ping}</td> 
+                    </tr> 
+                    <!-- BEGIN buddy_list --> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_buddies}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{buddy_list}</td> 
+                    </tr> 
+                    <!-- END buddy_list --> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_platform}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{platform}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_game}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{type}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_address}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{address}</td> 
+                    </tr> 
+                  </table> 
+                  <!-- END Details --> 
+                  <table border="0" cellspacing="0" cellpadding="2"> 
+                    <!-- BEGIN admin_links --> 
+                    <tr> 
+                      <td height=15></td> 
+                    </tr> 
+                    <tr> 
+                      <td class="bodyText">{admin_links}</td> 
+                    </tr> 
+                    <!-- END admin_links --> 
+                  </table></td> 
+              </tr> 
+            </table> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="5"> 
+              <!-- BEGIN info --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{info}</td> 
+              </tr> 
+              <!-- END info --> 
+            </table> 
+            <!-- BEGIN HidePlayersBlock --> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="3"> 
+                    <tr> 
+                      <td height=10></td> 
+                    </tr> 
+                    <tr> 
+                      <td class="bodyText">{lang_members_in_server}: <b>{members_on}</b></td> 
+                    </tr> 
+                  </table> 
+                  <table border="0" cellspacing="0" cellpadding="3"> 
+                    <tr> 
+                      <td height=10></td> 
+                    </tr> 
+                    <tr> 
+                      <td class="titleText">{lang_player}</td> 
+                      <td width=10></td> 
+                      <td class="titleText">{lang_frags}</td> 
+                    </tr> 
+                    <!-- BEGIN PlayersBlock --> 
+                    <tr {highlight}> 
+                      <td class="bodyText">{player}</td> 
+                      <td width=10></td> 
+                      <td class="bodyText">{frags}</td> 
+                    </tr> 
+                    <!-- END PlayersBlock --> 
+                  </table></td> 
+              </tr> 
+            </table> 
+            <!-- END HidePlayersBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <!-- END ServerBlock --> 
+</table>

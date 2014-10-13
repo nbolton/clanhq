@@ -1,0 +1,40 @@
+#!/usr/local/bin/php
+
+<?
+
+$upgrade_file = "cms_4.0.2_appro.tar.gz";
+
+if (!file_exists($upgrade_file)) {
+  die("FATAL: $upgrade_file does not exist!\n\n");
+}
+
+if (!file_exists("htdocs/lockfile.upgrade")) {
+  die("FATAL: htdocs/lockfile.upgrade does not exist!\n\n");
+}
+
+echo "Creating lockfile... ";
+`mv htdocs/lockfile.upgrade htdocs/lockfile`;
+echo "Done!\n";
+
+$remove = array(
+  "docs", "images", "js", "lang",
+  "modules", "php", "server", "source",
+  "sql", "themes"
+);
+echo "Removing old files... ";
+foreach($remove as $folder) {
+  `rm -fR htdocs/$folder`;
+}
+echo "Done!\n";
+
+echo "Extracting new files... ";
+`tar xfvz $upgrade_file`;
+echo "Done!\n";
+
+echo "Changing file ownership... ";
+`chown -fR admin:admin *`;
+echo "Done!\n";
+
+echo "Upgrade complete!\n\n";
+
+?>

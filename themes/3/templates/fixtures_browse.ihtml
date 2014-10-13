@@ -1,0 +1,45 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_fixtures.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <!-- BEGIN SortsBlock --> 
+                <td class="titleText"><a href="?mod={mod}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="?mod={mod}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                  <!----> </td> 
+                <!-- END SortsBlock --> 
+                <td class="titleText">{lang_maps}</td> 
+              </tr> 
+              <tr> 
+                <td height=3></td> 
+              </tr> 
+              <!-- BEGIN RowBlock --> 
+              <tr {alt_color}> 
+                <td class="bodyText">{tag}</td> 
+                <td class="bodyText">{match_type}</td> 
+                <td class="bodyText">{date}</td> 
+                <td class="bodyText">{time}</td> 
+                <td class="bodyText">{timeleft}</td> 
+                <td class="bodyText">{maps}</td> 
+                <td class="bodyText"><a href=?mod={mod}&action=details&id={id}>{lang_details}</a></td> 
+              </tr> 
+              <!-- END RowBlock --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText>{nav_page_index}</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

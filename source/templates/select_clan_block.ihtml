@@ -1,0 +1,92 @@
+<script language="javascript">
+<!--
+function checkShowCustom() {
+  if (this.form.clan_id.value != "") {
+    customClanInfo.style.position = 'absolute';
+    customClanInfo.style.visibility = 'hidden';
+  } else {
+    customClanInfo.style.position = '';
+    customClanInfo.style.visibility = '';
+  }
+}
+-->
+</script>
+ <table border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+     <td class="titleText">{lang_opponent_details}</td> 
+   </tr> 
+  <tr> 
+     <td height="3"></td> 
+   </tr> 
+  <tr> 
+     <td> <table border="0" cellspacing="0" cellpadding="0"> 
+         <tr> 
+          <td height=3></td> 
+        </tr> 
+         <tr> 
+          <td> <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class="bodyText"><table border="0" cellpadding="0" cellspacing="0"> 
+                    <tr> 
+                      <td class="bodyText">{lang_clan_select_help}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height="5"></td> 
+                    </tr> 
+                    <tr> 
+                      <td>{clan_id_select}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height="3"></td> 
+                    </tr> 
+                  </table> 
+                  <div id='customClanInfo' class=''> 
+                    <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td height='5'></td> 
+                        <td></td> 
+                      </tr> 
+                      <tr> 
+                        <td class="titleText">{lang_tag}</td> 
+                        <td width="5"></td> 
+                        <td rowspan="5" width="5"></td> 
+                        <td> <input type="text" name="tag" size="5" class="formTextbox" value="{tag}"></td> 
+                      </tr> 
+                      <tr> 
+                        <td height="3"></td> 
+                        <td></td> 
+                      </tr> 
+                      <tr> 
+                        <td class="titleText">{lang_name}</td> 
+                        <td width="5"></td> 
+                        <td> <input type="text" name="name" class="formTextbox" size="20" value="{name}"></td> 
+                      </tr> 
+                      <tr> 
+                        <td height="3"></td> 
+                        <td></td> 
+                      </tr> 
+                      <tr> 
+                        <td class="titleText">{lang_website}</td> 
+                        <td width="5"></td> 
+                        <td> <table border="0" cellpadding="0" cellspacing="0"> 
+                            <tr> 
+                              <td class="bodyText">http://&nbsp;</td> 
+                              <td><input type="text" name="url" class="formTextbox" size="30" value="{url}"></td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                    </table> 
+                  </div> 
+                  <script>checkShowCustom()</script> </td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+         <tr> 
+          <td height=3></td> 
+        </tr> 
+       </table></td> 
+   </tr> 
+  <tr> 
+     <td height=5></td> 
+   </tr> 
+</table> 

@@ -1,0 +1,65 @@
+<link href="css/score_controler.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+var scoresTableSegmentCount = {segment_count}, scoreCount = {score_count};
+
+function generateScoresTable(appendTableRow) {
+  var i;
+  
+  if (!appendTableRow) {
+    scoreCount = 1;
+	scoresTableSegmentCount = 2;
+    scoresTableBase.innerHTML = scoresTableHeader.innerHTML;
+  } else {
+    scoresTableSegmentCount = appendTableRow;
+  }
+  
+  for (i=0; i < scoresTableSegmentCount; i++) {
+	scoreCount++;
+	scoresTableBase.innerHTML += "<!-- BEGIN scoresTableSegment_" + scoreCount + " -->";
+	scoresTableBase.innerHTML += scoresTableSegment.innerHTML.replace(/%scoreID%/g, scoreCount);
+	scoresTableBase.innerHTML += "<!-- END scoresTableSegment_" + scoreCount + " -->";
+  }
+}
+
+function deleteScore(scoreID, action, warning) {
+  if (!warning) { warning = "{lang_score_delete_warn}"; }
+  if (confirm(warning)) {
+    searchPattern = RegExp("<!-- BEGIN scoresTableSegment_"+scoreID+" -->(.|\\n)*<!-- END scoresTableSegment_"+scoreID+" -->");
+    scoresTableBase.innerHTML = scoresTableBase.innerHTML.replace(searchPattern, '');
+  }
+}
+
+function restoreScores() {
+  scoresTableBase.innerHTML = scoresCache;
+}
+//-->
+</script>
+<div id='scoresTableHeader' class='hiddenLayer'>
+  <table border="0" cellspacing="0" cellpadding="2"> 
+    <tr> 
+      <td class='scoresTableWidthSelfScore'><span class='titleText'>{self_tag}</span></td> 
+      <td class='scoresTableWidthEnemyScore'><span class='titleText'>{lang_enemy}</span></td> 
+      <td class='scoresTableWidthMapName'><span class='titleText'>{lang_map}</span></td> 
+      <td class='scoresTableWidthUploadSs'><span class='titleText'>{lang_upload_screenshot}</span></td> 
+      <td><span class='titleText'>{lang_screenshot}</span></td>
+    </tr> 
+  </table> 
+</div> 
+<div id='scoresTableSegment' class='hiddenLayer'>
+  <!-- BEGIN ScoresRow -->
+  <!-- BEGIN scoresTableSegment_{score_id} -->
+  <table border="0" cellspacing="0" cellpadding="2"> 
+    <tr> 
+      <td class='scoresTableWidthSelfScore'><input type="text" name="self_score[{score_id}]" class="formTextbox" size="3" maxlength="10" value="{self_score}"></td> 
+      <td class='scoresTableWidthEnemyScore'><input type="text" name="enemy_score[{score_id}]" class="formTextbox" size="3" maxlength="10" value="{enemy_score}"></td> 
+      <td class='scoresTableWidthMapName'><input type="text" name="map_name[{score_id}]" class="formTextbox" size="10" maxlength="255" value="{map_name}"></td> 
+      <td class='scoresTableWidthUploadSs'><input type="file" name="screenshot_upload[{score_id}]" class="formTextbox" size="10"></td> 
+      <td>{screenshot}</td>
+	  <td class='scoresTableSeporator'></td>
+      <td><a href='javascript:;' onClick="deleteScore({delete_parameters})"><img src='themes/{theme_id}/images/icon_delete.gif' border='0' alt='{lang_delete_score}'></a></td> 
+    </tr> 
+  </table> 
+  <!-- END scoresTableSegment_{score_id} -->
+  <!-- END ScoresRow -->
+</div>

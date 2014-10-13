@@ -1,0 +1,31 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault">
+        <tr> 
+          <td class="bodyText"> 
+            <table border="0" cellspacing="0" cellpadding="0">
+             <!-- BEGIN message -->
+              <tr><td>{message}</td></tr><tr><td height=8></td></tr>
+             <!-- END message -->
+            </table>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td class="bodyText">{msg}<br>
+                        {hide_backto}{lang_back_to_module_home}<!---->
+                        {hide_create_link}{lang_admin_create_item}<!---->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,99 @@
+ 
+ + Main CMS Features +
+ 
+ [*] User Interface
+    
+    - With CMS PathFinder you are able to easily navigate
+      back through various different components of your
+      website avoiding having to guess the page from your
+      browser's history.
+    
+    - Shortcuts to the Administraion back-end of your site
+      to avoid having to take the long route to editing a
+      comment on a match result for example.
+    
+    - Easy-to-use site navigation featuring the inovative
+      login system where members of your clan can login
+      and comment on various different items for each module.
+ 
+ [*] Messaging System
+    
+    - Even with various different types of popular ways of
+      communication such as IRC, MSN or Email, there is always
+      going to be a situation where you can't use them
+      because of limitations on the system you're using.
+    
+    - The CMS integrated web-based messaging system voids the
+      need to have any type of additional software installed.
+    
+    - The system works just like ordinary web-based e-mail
+      only all your contacts are conveniently stored in a
+      buddy list, so if a buddy changes any details it's all
+      done automaticly for you so you don't have to worry about
+      keeping external lists up-to-date.
+    
+    - You can also broadcast messages to every single member
+      in your clan knowing that the next time they go on the
+      website that message will pop up on their screen.
+    
+ [*] Server Monitoring
+    
+    - In your CMS server watch module, you can add the IP
+      addresses for servers such as Half-Life, Quake, Tribes,
+      Unreal and many more.
+    
+    - Once these are entered into your site, CMS will send a
+      live query to the server for info such as server name,
+      current map, a list of players on the server, and so on.
+    
+    - Based on your clan's tag, CMS can calculate how many
+      members of your clan are in the server, and based on your
+      CMS buddy list CMS can alert you in the server watch
+      window when one of your buddies are online.
+ 
+ [*] User Themes
+    
+    - The CMS themes system allows you to use either themes
+      made especialy for you or from our range of global clan
+      site themes.
+    
+    - We are able to duplicate your old site's layout and
+      convert it into a theme which you and your users can
+      use as you please.
+    
+    - Not only can each of your users have their own theme,
+      they can also individualy "tweak" (change colours, fonts,
+      position of info panels) the theme so that it suits them.
+
+ [*] Technical Support & Updates
+    
+    - We provide you with a large library of flash tutorials
+      to help you use CMS incase you get stuck or lost.
+    
+    - Failing that, we will give you live assistance via IRC,
+      MSN or Email (phone support is also available at your
+      telecom service's normal rate).
+    
+    - Incase one of our servers suffers technical difficulty,
+      we have an emergency backup server which all of your data
+      is stored on. This will give you a gaurenteed 99% uptime.
+    
+    - As we are continuously updating and expanding upon CMS
+      based on customer input so that you may experience new 
+      features requested by other clans.
+ 
+ [*] Extra Services & Features
+    
+    - We also provide the support for your own domain name,
+      i.e. www.my-clan.com could be used for your entire site.
+      As standard, this is included free with all packages.
+    
+    - Users accessing the site from different points on the
+      globe can take advantage of our redirect system where
+      your site is mirrored on several servers and they will
+      be sent to the server closest to them to lower site load
+      and increase the overall speed of your site.
+    
+    - If you decide to change your clan name we can easliy
+      and decisively change your site name & address.
+ 

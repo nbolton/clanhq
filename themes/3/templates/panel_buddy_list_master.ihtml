@@ -1,0 +1,74 @@
+<!-- BEGIN buddy_list --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="35" background="themes/{theme_id}/images/panel_topper.gif"> 
+  <tr> 
+    <td valign="top"> <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td height="8"></td> 
+        </tr> 
+        <tr> 
+          <td width="16"></td> 
+          <td><img src="themes/{theme_id}/images/panel_buddy_list.gif" width="55" height="12"></td> 
+        </tr> 
+      </table></td> 
+    <td align="right" valign="top"> <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td height="5"></td> 
+        </tr> 
+        <tr> 
+          <!-- BEGIN buddy_list_modes --> 
+          <!-- BEGIN buddy_list_minimize_button --> 
+          <form method="post" action="?mod=settings&action=update_private"> 
+            <input type="hidden" name="do" value="single"> 
+            <input type="hidden" name="input[minimize]" value=1> 
+            <input type="hidden" name="input[sidebar]" value="show_buddy_list"> 
+            <input type="hidden" name="ref" value="{this_ref}"> 
+            <td align="right"> <input type="image" border="0" src="themes/{theme_id}/images/icon_minimize.gif" alt="{lang_minimize}" width="12" height="12" name="image9"> </td> 
+          </form> 
+          <td width=2></td> 
+          <!-- END buddy_list_minimize_button --> 
+          <!-- BEGIN buddy_list_maximize_button --> 
+          <form method="post" action="?mod=settings&action=update_private"> 
+            <input type="hidden" name="do" value="single"> 
+            <input type="hidden" name="input[maximize]" value=1> 
+            <input type="hidden" name="input[sidebar]" value="show_buddy_list"> 
+            <input type="hidden" name="ref" value="{this_ref}"> 
+            <td align="right"> <input type="image" border="0" src="themes/{theme_id}/images/icon_maximize.gif" alt="{lang_maximize}" width="12" height="11" name="image4"> </td> 
+          </form> 
+          <td width=2></td> 
+          <!-- END buddy_list_maximize_button --> 
+          <form method="post" action="?mod=settings&action=update_private"> 
+            <input type="hidden" name="do" value="single"> 
+            <input type="hidden" name="input[close]" value=1> 
+            <input type="hidden" name="input[sidebar]" value="show_buddy_list"> 
+            <input type="hidden" name="ref" value="{this_ref}"> 
+            <td align="right"> <input type="image" border="0" src="themes/{theme_id}/images/icon_close.gif" alt="{lang_close}" width=12 height=11> </td> 
+          </form> 
+          <!-- END buddy_list_modes --> 
+        </tr> 
+      </table></td> 
+    <td width="25"></td> 
+  </tr> 
+</table>
+<!-- BEGIN buddy_list_minimize_block --> 
+<table width=100% border=0 cellspacing=0 cellpadding=3 background="themes/{theme_id}/images/panel_back.gif"> 
+  <tr> 
+    <td> <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+        <tr> 
+          <td width="6"></td> 
+          <td> <table width="100%" border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td class="bodyText">{BuddyListTemplate}</td> 
+              </tr> 
+            </table></td> 
+          <td width="6"></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<!-- END buddy_list_minimize_block --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/panel_bottom.gif" width="165" height="9"></td> 
+  </tr> 
+</table>
+<!-- END buddy_list --> 

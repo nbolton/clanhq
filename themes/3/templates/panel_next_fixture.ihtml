@@ -1,0 +1,8 @@
+<!-- BEGIN NextFixtureRowBlock -->
+<span class="titleText">{lang_clan}:</span> {nf_tag}<br>
+<span class="titleText">{lang_type}:</span> {nf_type}<br>
+<span class="titleText">{lang_date}:</span> {nf_date}<br>
+<span class="titleText">{lang_time}:</span> {nf_time}<br>
+<span class="titleText">{lang_timeleft}:</span> {nf_time_left} {nf_time_type}<br>
+[ <span class="titleText"><a href=?mod=fixtures&action=details&id="{nf_id}">{lang_details}</a></span> ] 
+<!-- END NextFixtureRowBlock -->

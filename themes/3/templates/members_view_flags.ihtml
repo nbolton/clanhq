@@ -1,0 +1,31 @@
+<script>
+ function SetFlag(name) {
+  if (name) {
+    opener.flag.innerHTML = "<img src='images/flags/"+name+".gif' border=0>";
+	opener.document.form.flag_id.value = name;
+  } else {
+    opener.flag.innerHTML = "{lang_select_a_flag}";
+	opener.document.form.flag_id.value = '';
+  }
+  self.close();
+}
+</script>
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+     <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+         <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td class="bodyText">{lang_members_view_flags_info}</td> 
+              </tr> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td>{flags}</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+       </table></td> 
+   </tr> 
+</table> 

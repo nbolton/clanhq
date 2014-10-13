@@ -1,0 +1,71 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_files.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td bordercolor="#000000" class="titleText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class=titleText>{lang_select_category}...</td> 
+              </tr> 
+              <tr> 
+                <td height=7></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText> <!-- BEGIN FileCatsBlock --> 
+                  <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td><a href="?mod=files&action=browse&cat={id}"><img src="themes/{theme_id}/images/{folder_image}" border="0"></a></td> 
+                      <td width=5></td> 
+                      <td class=bodyText><a href=?mod=files&action=browse&cat={id}>{name}</a>{file_count}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=5></td> 
+                    </tr> 
+                  </table> 
+                  <!-- END FileCatsBlock --> </td> 
+              </tr> 
+              <tr> 
+                <td height="5"></td> 
+              </tr> 
+            </table> 
+            <!-- BEGIN FilesBlock --> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td width="17"></td> 
+                <!-- BEGIN SortsBlock --> 
+                <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="{this_ref}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                  <!----> </td> 
+                <!-- END SortsBlock --> 
+              </tr> 
+              <tr> 
+                <td height=3></td> 
+              </tr> 
+              <!-- BEGIN RowBlock --> 
+              <tr title="{lang_info}: {info}"> 
+                <td class="bodyText"><a href="{link}" {target}><img alt="{action_type} {filename}!" src="themes/{theme_id}/images/download.gif" border="0"></a></td> 
+                <td class="bodyText">{filename}</td> 
+                <td class="bodyText">{filesize}</td> 
+                <td class="bodyText">{uploaded}</td> 
+                <td class="bodyText">{lastdl}</td> 
+                <td class="bodyText">{count}</td> 
+              </tr> 
+              <!-- END RowBlock --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText>{nav_page_index}</td> 
+              </tr> 
+            </table> 
+            <!-- END FilesBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

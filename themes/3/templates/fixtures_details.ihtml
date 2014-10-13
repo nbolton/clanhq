@@ -1,0 +1,262 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_fixture.gif"><img src="themes/{theme_id}/images/title_&_details.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN FixturesBlock --> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td class="titleText">{lang_clan}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{tag} ({clan})</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_type}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{match_type}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_date}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{date}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_time}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{time}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_timeleft}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{timeleft}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_maps}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{maps}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_server}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{server}</td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <!-- BEGIN HideExInfo --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="titleText" colspan=3>{lang_information}</td> 
+              </tr> 
+              <tr> 
+                <td colspan=3> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td class="bodyText"><b>{slots_used}</b>/<b>{players_needed}</b> {lang_fix_info_1}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=2></td> 
+                    </tr> 
+                    <tr> 
+                      <td class="bodyText">{lang_fix_slots_regd} {slots}
+                        <!-- BEGIN details_link --> 
+                        (<a href=javascript:; onClick="openBrWindow('?mod=fixtures&action=slots&preview=1&id={id}','', 'scrollbars=yes,resizable=yes,width=430,height=400')">{lang_details}</a>)
+                        <!-- END details_link --> </td> 
+                    </tr> 
+                    <!-- BEGIN HideReg --> 
+                    <tr> 
+                      <td height=7></td> 
+                    </tr> 
+                    <form method="post" action="?mod=fixtures&action=register"> 
+                      <tr> 
+                        <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                            <tr> 
+                              <td> <select name="input[availability]" class="formDropdown"> 
+                                  <option>Availability</option> 
+                                  <option>---------------</option> 
+                                   
+                                  
+                                  {availability}
+                                 
+                                 
+                                </select> </td> 
+                              <td width=4></td> 
+                              <td> <select name="input[position]" class="formDropdown"> 
+                                  <option>Position</option> 
+                                  <option>---------------</option> 
+                                   
+                                  
+                                  {position}
+                                 
+                                 
+                                </select> </td> 
+                              <td width=4></td> 
+                              <td> <select name="input[duration]" class="formDropdown"> 
+                                  <option>Duration</option> 
+                                  <option>---------------</option> 
+                                   
+                                  
+                                  {duration}
+                                 
+                                 
+                                </select> </td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                      <tr> 
+                        <td height=4></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="submit" value="{lang_fix_info_reg}" class=formButton> </td> 
+                      </tr> 
+                    </form> 
+                    <!-- END HideReg --> 
+                    <!-- BEGIN HideUnReg --> 
+                    <tr> 
+                      <td height=7></td> 
+                    </tr> 
+                    <form method="post" action="?mod=fixtures&action=unregister"> 
+                      <tr> 
+                        <td> <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="submit" value="{lang_fix_info_unreg}" class=formButton> </td> 
+                      </tr> 
+                    </form> 
+                    <!-- END HideUnReg --> 
+                    <!-- BEGIN SlotsTaken --> 
+                    <tr> 
+                      <td height=7></td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText> {lang_fix_slots_taken} </td> 
+                    </tr> 
+                    <!-- END SlotsTaken --> 
+                  </table></td> 
+              </tr> 
+              <!-- END HideExInfo --> 
+              <!-- BEGIN post_comment --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td colspan=3> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <form method="post" action="?mod=comments&action=create"> 
+                        <td> <input type="hidden" name="type" value="{mod}"> 
+                          <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="hidden" name="input[disable_title]" value="1"> 
+                          <input type="submit" value="{lang_postcomment}" class=formButton> </td> 
+                      </form> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- END post_comment --> 
+              <!-- BEGIN admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText" colspan=3>{admin_links}</td> 
+              </tr> 
+              <!-- END admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <!-- END FixturesBlock --> 
+</table>
+<!-- BEGIN AllComments --> 
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN HidePrint_1 --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_comments.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN HidePrint_1 --> 
+</table>
+<!-- BEGIN ComBlock --> 
+<a name="c{c_id}"></a> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+  <tr> 
+    <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td class="bodyText"> <!-- BEGIN avatar_id --> 
+            <img src=?mod=files&action=getimage&id={avatar_id} align="left" vspace="5" hspace="10"> 
+            <!-- END avatar_id --> 
+            {comments} </td> 
+        </tr> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText">{c_info}</td> 
+        </tr> 
+        <!-- BEGIN comment_admin_links --> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText">{comment_admin_links}</td> 
+        </tr> 
+        <!-- END comment_admin_links --> 
+      </table></td> 
+  </tr> 
+</table>
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<!-- END ComBlock --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td height=3></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <!-- BEGIN post_comment --> 
+              <tr> 
+                <td colspan=3> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <form method="post" action="?mod=comments&action=create"> 
+                        <td> <input type="hidden" name="type" value="{mod}"> 
+                          <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="hidden" name="input[disable_title]" value="1"> 
+                          <input type="submit" value="{lang_postcomment}" class=formButton> </td> 
+                      </form> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- END post_comment --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<!-- END AllComments --> 

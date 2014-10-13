@@ -1,0 +1,280 @@
+<script language="JavaScript">
+<!--
+function SetFlag(path) {
+  if (path) {
+    self.flag.innerHTML = "<img src='images/flags/{flag_id}.gif' border=0>";
+  } else {
+    self.flag.innerHTML = "{lang_select_a_flag}";
+  }
+}
+
+function checkPass() { 
+  
+  if(!(document.form.password.value == document.form.pass2.value)) {
+    alert("{lang_passwords_not_match}");
+    return false;
+  }
+  return true;
+}
+// -->
+</script>
+ <div style="position:absolute; z-index:1; visibility: hidden"><img src=images/system/dead_px.gif width=0 height=0></div> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_edit.gif"><img src="themes/{theme_id}/images/title_&_profile.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form name=form enctype="multipart/form-data" method="post" action="?mod=members&action=update_profile"> 
+          <tr> 
+            <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="bodyText">{lang_members_edit_profile_info}</td> 
+                </tr> 
+                <!-- BEGIN message --> 
+                <tr> 
+                  <td>{message}</td> 
+                </tr> 
+                <!-- END message --> 
+                <tr> 
+                  <td height='17'></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" width="104">{lang_name}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="text" name="input[name]" class="formTextbox" size="40" value="{name}" maxlength="255"> </td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class=titleText>{lang_activity}</td> 
+                </tr> 
+                <tr> 
+                  <td>{s_activity}</td> 
+                </tr> 
+                <tr> 
+                  <td class=bodyText>{lang_activity_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class=titleText>{lang_reset_password}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="password" name="password" class="formTextbox" size="40"> </td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td> <input type="password" class="formTextbox" size="40" name="pass2"> </td> 
+                        <td width=10></td> 
+                        <td class=bodyText>{lang_retype_to_confirm}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class=bodyText>{lang_reset_password_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="titleText">{lang_realname}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[real_name]" class="formTextbox" size="40" value="{real_name}" maxlength="255"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_age}</td> 
+                  <td width=10></td> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td> <input type="text" name="input[birth_day]" value="{birth_day}" size="2" maxlength="2" class="formTextbox"> </td> 
+                        <td class="bodyText">&nbsp;/&nbsp;</td> 
+                        <td> <input type="text" name="input[birth_month]" value="{birth_month}" size="2" maxlength="2" class="formTextbox"> </td> 
+                        <td class="bodyText">&nbsp;/&nbsp;</td> 
+                        <td> <input type="text" name="input[birth_year]" value="{birth_year}" size="4" maxlength="4" class="formTextbox"> </td> 
+                        <td width=10></td> 
+                        <td class="bodyText">DD / MM / YYYY</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_quote}</td> 
+                  <td width=10></td> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td> <input type="text" name="input[quote]"  size="40" maxlength="255" class="formTextbox" value="{quote}"> </td> 
+                        <td width=10></td> 
+                        <td class=titleText>{lang_style}</td> 
+                        <td width=5></td> 
+                        <td>{select_quote_style}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_location}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[location]" value="{location}"  size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_class}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[class]" value="{class}" size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_email}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[email]" value="{email}" size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_msn}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[msn]" value="{msn}" size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_aim}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[aim]" value="{aim}" size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_yahoo}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[yahoo]" value="{yahoo}" size="40" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_icq}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[icq]" value="{icq}" size="10" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_wonid}</td> 
+                  <td width=10></td> 
+                  <td> <input type="text" name="input[wonid]" value="{wonid}" size="10" maxlength="100" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_nationality}</td> 
+                  <td width=10></td> 
+                  <td class=bodyText height="27"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText><input type="hidden" name="flag_id" value="{flag_id}"><div id=flag></div></td> 
+                        <td width=10></td> 
+                        <td class=bodyText>[ <a href=javascript:; onClick="openChild('?mod=members&action=view_flags', 'view_flags')">{lang_change}</a> ]</td> 
+                        <script language="JavaScript">SetFlag({flag_id})</script> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table> 
+              <table border=0 cellspacing=0 cellpadding=2> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_info}</td> 
+                </tr> 
+                <tr> 
+                  <td> <textarea name="input[info]" cols="60" rows="7" class="formTextboxMulti">{info}</textarea> </td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_avatar}</td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class="bodyText">{lang_choose}</td> 
+                        <td width="10"></td> 
+                        <td>{s_user_avatar}</td> 
+                      </tr> 
+                      <td height=5></td> 
+                      <tr> 
+                        <td class="bodyText">{lang_upload}</td> 
+                        <td width="10"></td> 
+                        <td> <input type="file" name="upload_avatar" class="formFilebox" size="30"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class=bodyText>{lang_avatar_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_logo}</td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class="bodyText">{lang_choose}</td> 
+                        <td width="10"></td> 
+                        <td>{s_user_logo}</td> 
+                      </tr> 
+                      <td height=5></td> 
+                      <tr> 
+                        <td class="bodyText">{lang_upload}</td> 
+                        <td width="10"></td> 
+                        <td> <input type="file" name="upload_logo" class="formFilebox" size="30"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class=bodyText>{lang_logo_help}</td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2">  
+                  <td height=10></td> 
+                <tr> 
+                  <td class="titleText">{lang_active_logins}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> {active_logins} </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_lastlogin}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> {f_lastlogin} </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_lastaction}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> {f_lastaction}</td> 
+                </tr> 
+                <td height=10></td> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td colspan=10> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td colspan=10 class=bodyText>{lang_chooseabutton}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" name="Input" value="{lang_save_changes_bttn}"
+					  	  onClick="return checkPass(this); return confirmForm('{lang_save_changes_q}\n{lang_submit_form_br}')"> </td> 
+                        <td width=10></td> 
+                        <td> <input class=formButton type="reset" name="Input" value="{lang_undo_changes_bttn}"
+					  		onClick="return confirmForm('{lang_undo_changes_q}\n{lang_reset_form_br}')"> </td> 
+                      </tr> 
+                    </table> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{this_ref}"> </td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table> 

@@ -1,0 +1,120 @@
+body {
+background-color: #222B34
+}
+
+a {
+color: #C2DAFF;
+text-decoration: underline;
+}
+
+a:hover {
+text-decoration: none; 
+color: #85A0C7
+}
+
+.tableSideBar {
+border: #000000
+}
+
+.altBgColor {
+}
+
+.bodyText {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #85A0C7;
+text-decoration: none
+}
+
+.bodyDark {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none
+}
+
+.bodyGood {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #00FF00;
+text-decoration: none
+}
+
+.bodyError {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFFF00;
+text-decoration: none
+}
+
+.titleText { 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #C2DAFF;
+text-decoration: none;
+font-weight: bold
+}
+
+.titleDark {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none ; font-weight: bold
+}
+
+.formButton {
+border: 1px #C2DAFF dashed;
+background-color: #28303D;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color: #C2DAFF
+}
+
+.formCheckbox {
+border: 1px #C2DAFF dashed;
+background-color: #28303D;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color: #C2DAFF
+}
+
+
+.formTextbox {
+border: 1px #C2DAFF dashed;
+background-color: #28303D;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color: #C2DAFF; 
+padding-top: 3px; 
+padding-right: 3px; 
+padding-bottom: 3px; 
+padding-left: 3px;
+height: 21px;
+}
+
+.formTextboxMulti {
+border: 1px #C2DAFF dashed;
+background-color: #28303D;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color: #C2DAFF;
+padding-top: 3px; 
+padding-right: 3px; 
+padding-bottom: 3px; 
+padding-left: 3px;
+}.formDropdown { border: 1px #C2DAFF dashed; background-color: #28303D; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #C2DAFF; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px; height: 21px; }
+.formFilebox { border: 1px #C2DAFF dashed; background-color: #28303D; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #C2DAFF; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px; height: 21px; }
+.formDropdownBold { border: 1px #C2DAFF dashed; background-color: #28303D; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #C2DAFF; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px; height: 21px; ; font-weight: bold}
+.backgroundLight {  background-color: #FFFFFF}
+.backgroundWin { background-color: #488764; color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none}
+.backgroundDraw { background-color: #485497; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; text-decoration: none}
+.backgroundLose { background-color: #7B5464; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; text-decoration: none}
+.bodyWarning { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFF00; text-decoration: none }
+.bodyFatal { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FF0000; text-decoration: none }
+.backgroundHighlight { background-color: #394759}
+.bodyTextShadow { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; text-decoration: none ; filter: Shadow(Color=black, strength=2, direction=135)}
+.colourGood { color: #00FF00}
+.formMultilist { border: 1 dashed; background-color: #28303D; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #C2DAFF; ; clip:  rect(   )}
+.buddyOver {  cursor: default}
+.tableInner {  background-color: 2F3844; border: none}
+.tableDefault { background-color: 2F3844; border: none }

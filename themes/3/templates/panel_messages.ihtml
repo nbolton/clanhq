@@ -1,0 +1,34 @@
+<div id=msg_table class="bodyText">
+<table border=0 cellspacing=0 cellpadding=0>
+  <!-- BEGIN MessagesRowBlock -->
+  <tr> 
+    <td><span id=msg_icon_{msg_id}></span></td>
+    <td width=7></td>
+    <td class=titleText><span id=msg_title_{msg_id}></span></td>
+  </tr>
+  <tr> 
+    <td id=msg_space_{msg_id}></td>
+  </tr>
+  <!-- END MessagesRowBlock -->
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0>
+  <tr>
+    <td height=5></td>
+  </tr>
+  <tr>
+    <td class=bodyText colspan=3>[ <a href=javascript:; onClick="openBrWindow('?mod=messages&action=inbox','', 'scrollbars=yes,resizable=yes,width=650,height=520')"><b>{lang_inbox}</b></a> ] [ <a href=?mod=messages target=messages><b>{lang_refresh}</b></a> ]</td>
+  </tr>
+  <tr>
+    <td height=5></td>
+  </tr>
+  <tr>
+    <td class=bodyText colspan=3>[ <a href=javascript:; onClick="openBrWindow('?mod=messages&action=compose','', 'scrollbars=yes,resizable=yes,width=650,height=520')"><b>{lang_compose}</b></a> ]</td>
+  </tr>
+</table>
+<script language="JavaScript">
+<!--
+self.msg_cached_table = self.msg_table.innerHTML;
+self.msg_table.innerHTML = "{lang_please_wait_loading}";
+//-->
+</script>

@@ -1,0 +1,7 @@
+<!-- BEGIN LastResultRowBlock -->
+<span class="titleText">{lang_clan}:</span> {lr_tag}<br>
+<span class="titleText">{lang_type}:</span> {lr_type}<br>
+<span class="titleText">{lang_date}:</span> {lr_date}<br>
+<span class="titleText">{lang_outcome}:</span> {lr_outcome}<br>
+[ <span class="titleText"><a href=?mod=results&action=details&id={lr_id}>{lang_reports}</a></span> ] 
+<!-- END LastResultRowBlock -->

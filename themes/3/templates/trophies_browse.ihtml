@@ -1,0 +1,59 @@
+ 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <!-- BEGIN message -->
+  <tr> 
+    <td>{message}</td>
+  </tr>
+  <tr> 
+    <td height='17'></td>
+  </tr>
+  <!-- END message -->
+  
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_trophies.gif"></td>
+  </tr>
+  <tr> 
+    <td height=15></td>
+  </tr>
+  
+</table>
+<!-- BEGIN RowBlock -->
+<a name="{id}"></a> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault">
+  <tr> 
+    <td bordercolor="#000000" class="bodyText"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+        <tr> 
+          <td class=titleText>{title}</td>
+        </tr>
+        <tr> 
+          <td class=bodyText>{date}</td>
+        </tr>
+        <tr> 
+          <td height=10></td>
+        </tr>
+        <tr> 
+          <td class=bodyText>{image}</td>
+        </tr>
+        <tr> 
+          <td height=10></td>
+        </tr>
+        <tr> 
+          <td class=bodyText>{info}</td>
+        </tr>
+        <tr> 
+          <td height=10></td>
+        </tr>
+        <tr> 
+          <td class=bodyText>{admin_links}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" height=20>
+  <tr> 
+    <td></td>
+  </tr>
+</table>
+<!-- END RowBlock -->

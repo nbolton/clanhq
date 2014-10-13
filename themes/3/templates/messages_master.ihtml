@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>{site_name} - {mod_name}</title>
+<script src=js/misc.js type=text/javascript language=javascript></script>
+<script src=js/functions.js type=text/javascript language=javascript></script>
+<link rel="stylesheet" href="themes/{theme_id}/default.css" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0"> 
+<iframe src=active.php name=active border=0 width=0 height=0 frameborder=0 scrolling=No></iframe> 
+<table border="0" cellspacing="0" cellpadding="10" align="center" width="100%"> 
+  <tr> 
+    <td width="100%"> <table width="100%" border="1" cellspacing="0" cellpadding="5" class="tableDefault" height="100%"> 
+        <tr> 
+          <td bordercolor="#000000"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class=bodyText> <b>{lang_main_menu}</b> // <a href=?mod=messages&action=inbox>{lang_inbox}</a> {msg_count_inbox} // <a href=?mod=messages&action=compose>{lang_compose}</a> // <a href=?mod=messages&action=sent>{lang_sent_items}</a> {msg_count_sent} // <a href=?mod=messages&action=saved>{lang_saved_items}</a> {msg_count_saved} // <a href=?mod=messages&action=deleted>{lang_recycle_bin}</a> {msg_count_deleted} </td> 
+                <td class=titleText align="right"><a href=?mod=messages target=messages onClick="window.close()">Close</a></td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <tr> 
+    <td width="100%"> {subTemplate}</td> 
+  </tr> 
+  <tr> 
+    <td colspan="2" class="bodyText"> <div align="center">{footnote}</div></td> 
+  </tr> 
+</table> 
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- BEGIN ServerWatchRowBlock --> 
+<script language="JavaScript">
+<!--
+parent.sw_table.innerHTML = parent.sw_cached_table;
+{vars}
+
+switch(parent.sw_name.innerHTML) {
+  case "": parent.sw_table.innerHTML = "{no_server}"; break;
+  case "ERROR": parent.sw_table.innerHTML = "{no_server}"; break;
+  case "TIMEOUT": parent.sw_table.innerHTML = "{timeout}"; break;
+  case "DOWN": parent.sw_table.innerHTML = "{server_down}"; break;
+}
+//-->
+</script>
+<!-- END ServerWatchRowBlock -->

@@ -1,0 +1,104 @@
+{RowController}
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_create_&.gif"><img src="themes/{theme_id}/images/title_poll.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form method="post" action="?mod=polls&action=insert"> 
+          <tr> 
+            <td> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="bodyText">{lang_polls_create_info}</td> 
+                </tr> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_title}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="text" name="input[title]" class="formTextbox" size="46" value="{title}" maxlength="255"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_title_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_info}</td> 
+                </tr> 
+                <tr> 
+                  <td> <textarea name="input[info]" cols="45" rows="4" class="formTextboxMulti">{info}</textarea> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_info_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+              </table> 
+              <div id='tableBase'> 
+                <div style="position:absolute; visibility: hidden">`</div> 
+              </div> 
+              <script>generateRows('tableBase', 'tableRow')</script> 
+              <table> 
+                <tr> 
+                  <td class="bodyText">{lang_add_option_tip}</td> 
+                </tr> 
+              </table> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_userlevel}</td> 
+                </tr> 
+                <tr> 
+                  <td>{s_userlevel}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_userlevel_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_public_voting}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{allow_pub}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_allow_pub_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_enabled}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{enabled}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_enabled_help}</td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td> <input class=formButton type="submit" value="{lang_save_changes_bttn}" onClick="return confirmForm('{lang_save_changes_q}')"> </td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

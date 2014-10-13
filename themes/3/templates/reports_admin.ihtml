@@ -1,0 +1,99 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_reports.gif"><img src="themes/{theme_id}/images/title_&_admin.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td colspan=10 class="bodyText">{lang_reports_admin_info}</td> 
+              </tr> 
+              <!-- BEGIN message --> 
+              <tr> 
+                <td height=5></td> 
+              </tr> 
+              <tr> 
+                <td>{message}
+                <td>  
+              </tr> 
+              <!-- END message --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <form method="post" action="?mod=reports&action=create"> 
+                  <td> <input type="hidden" name="id" value="{type_id}"> 
+                    <input type="hidden" name="ref" value="{this_ref}"> 
+                    <input type="hidden" name="type" value="{type}"> 
+                    <input class=formButton type="submit" value="{lang_create_reports_bttn}"> </td> 
+                </form> 
+              </tr> 
+            </table> 
+            <form method="post" action="?mod=reports&action=delete"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td></td> 
+                  <!-- BEGIN SortsBlock --> 
+                  <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="{this_ref}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                    <!----> </td> 
+                  <!-- END SortsBlock --> 
+                  <td class=titleText>{lang_comments}</td> 
+                </tr> 
+                <tr> 
+                  <td height=3></td> 
+                </tr> 
+                <!-- BEGIN RowBlock --> 
+                <tr {alt_color}> 
+                  <td width="25"> <input type="checkbox" name="item[{id}]" value="{id}"></td> 
+                  <td class="bodyText">{title}</td> 
+                  <td class="bodyText">{creator}</td> 
+                  <td class="bodyText">{date}</td> 
+                  <td class="bodyText">{userlevel}</td> 
+                  <td class="bodyText"><a href=?mod=comments&action=admin&id={id}&type={mod}&origin={type}&origin_id={type_id}>{lang_browse}</a> ({num_comments}) <a href=?mod=comments&type={mod}&id={id}&action=create&origin={type}&origin_id={type_id}>{lang_create}</a></td> 
+                  <td class="bodyText"><a href=?mod=reports&action=edit&id={id}&type={type}&type_id={type_id}>{lang_edit}</a></td> 
+                  <td class="bodyText"><a href=?mod={mod}&action=details&id={id}&type={type}>{lang_view}</a></td> 
+                </tr> 
+                <!-- END RowBlock --> 
+                <tr> 
+                  <td colspan=8 class=bodyText>&nbsp;&nbsp;<img src="themes/{theme_id}/images/arrow_up.gif"> &nbsp;{lang_check_to_delete}</td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=8> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText>{nav_page_index}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=15></td> 
+                      </tr> 
+                    </table> 
+                    <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+                      <tr> 
+                        <td colspan=9 class=bodyText>{lang_select_to_delete}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" value="{lang_delete_items_bttn}" onClick="return confirmForm('{lang_delete_items_q}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table> 
+              <input type="hidden" name="ref" value="{ref}"> 
+              <input type="hidden" name="type" value="{type}"> 
+              <input type="hidden" name="id" value="{id}"> 
+            </form> 
+            <!-- END ShowBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

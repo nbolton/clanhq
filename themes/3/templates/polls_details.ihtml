@@ -1,0 +1,171 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_poll.gif"><img src="themes/{theme_id}/images/title_&_details.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2" width=100%> 
+              <!-- BEGIN title --> 
+              <tr> 
+                <td class="titleText">{title}</td> 
+              </tr> 
+              <td height=2></td> 
+                <!-- END title --> 
+                <!-- BEGIN info --> 
+              <tr> 
+                <td class="bodyText">{info}</td> 
+              </tr> 
+              <td height=5></td> 
+                <!-- END info --> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <!-- BEGIN RowBlock --> 
+                    <tr> 
+                      <td class="bodyText">{opt}</td> 
+                      <td width=15></td> 
+                      <td class="bodyText" align=right>{votes}</td> 
+                      <td width=10></td> 
+                      <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                          <tr> 
+                            <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                                <tr alt='arse-{opt_id}'> 
+                                  <td width=1><img src="themes/{theme_id}/images/poll_s_bar.gif"></td> 
+                                  <td width={opt_bar_width} background="themes/{theme_id}/images/poll_m_bar.gif"></td> 
+                                  <td width=1><img src="themes/{theme_id}/images/poll_e_bar.gif"></td> 
+                                </tr> 
+                              </table></td> 
+                            <td width=10></td> 
+                            <td class="bodyText">{opt_percent}</td> 
+                          </tr> 
+                        </table></td> 
+                    </tr> 
+                    <tr> 
+                      <td height=2></td> 
+                    </tr> 
+                    <!-- END RowBlock --> 
+                  </table></td> 
+              </tr> 
+              <td height=10></td> 
+              <tr> 
+                <td class="titleText">{lang_details}</td> 
+              </tr> 
+              <tr> 
+                <td colspan=2 class="bodyText">{poll_details}</td> 
+              </tr> 
+              <td height=10></td> 
+              <tr> 
+                <td class="titleText">{lang_poll_whovoted}</td> 
+              </tr> 
+              <tr> 
+                <td colspan=2 class="bodyText">{who_voted}</td> 
+              </tr> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td colspan=2 class="bodyText"> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <form method="post" action="?mod=comments&action=create"> 
+                        <td> <input type="hidden" name="type" value="{mod}"> 
+                          <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="submit" value="{lang_postcomment}" class=formButton name="submit2"> </td> 
+                      </form> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- BEGIN admin_links --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{admin_links}</td> 
+              </tr> 
+              <!-- END admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<!-- BEGIN ComBlock --> 
+<a name="c{c_id}"></a> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+  <tr> 
+    <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td class="bodyText"> <!-- BEGIN avatar_id --> 
+            <img src=?mod=files&action=getimage&id={avatar_id} align="left" vspace="5" hspace="10"> 
+            <!-- END avatar_id --> 
+            {comments} </td> 
+        </tr> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText">{c_info}</td> 
+        </tr> 
+        <!-- BEGIN quote --> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+        <tr> 
+          <td class=bodyText>{quote}</td> 
+        </tr> 
+        <!-- END quote --> 
+        <!-- BEGIN comment_admin_links --> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText">{comment_admin_links}</td> 
+        </tr> 
+        <!-- END comment_admin_links --> 
+      </table></td> 
+  </tr> 
+</table>
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<!-- END ComBlock --> 
+<!-- BEGIN post_comment --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td height=3></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <form method="post" action="?mod=comments&action=create"> 
+                  <td> <input type="hidden" name="type" value="{mod}"> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{this_ref}"> 
+                    <input type="submit" value="{lang_postcomment}" class=formButton name="submit"> </td> 
+                </form> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<!-- END post_comment --> 

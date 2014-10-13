@@ -1,0 +1,170 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_member.gif"><img src="themes/{theme_id}/images/title_&_profile.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="2"> 
+                    <tr> 
+                      <td class="titleText" width="60">{lang_name}</td> 
+                      <td width=10></td> 
+                      <td class="bodyText">{name}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class="titleText" width="60">{lang_rank}</td> 
+                      <td width=10></td> 
+                      <td class="bodyText">{rank}</td> 
+                    </tr> 
+                    <!-- BEGIN class --> 
+                    <tr> 
+                      <td class="titleText" width="60">{lang_class}</td> 
+                      <td width=10></td> 
+                      <td class="bodyText">{class}</td> 
+                    </tr> 
+                    <!-- END class --> 
+                  </table></td> 
+                <!-- BEGIN user_avatar --> 
+                <td width="15"></td> 
+                <td>{user_avatar}</td> 
+                <!-- END user_avatar --> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2">  
+                <td height=10 width="60"></td> 
+                <!-- BEGIN real_name --> 
+              <tr> 
+                <td class="titleText">{lang_realname}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{real_name}</td> 
+              </tr> 
+              <!-- END real_name --> 
+              <!-- BEGIN age --> 
+              <tr> 
+                <td class="titleText">{lang_age}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{age}</td> 
+              </tr> 
+              <!-- END age --> 
+              <!-- BEGIN location --> 
+              <tr> 
+                <td class="titleText">{lang_location}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{location}</td> 
+              </tr> 
+              <!-- END location --> 
+              <!-- BEGIN activity --> 
+              <tr> 
+                <td class="titleText">{lang_activity}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{activity}</td> 
+              </tr> 
+              <!-- END activity --> 
+              <tr> 
+                <td class="titleText">{lang_status}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{status}</td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <!-- BEGIN quote --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <!-- BEGIN flag --> 
+                      <td width=1></td> 
+                      <td>{flag}</td> 
+                      <td width=13></td> 
+                      <!-- END flag --> 
+                      <td class="bodyText">{quote}</td> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- END quote --> 
+              <!-- BEGIN info --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{info}</td> 
+              </tr> 
+              <!-- END info --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <!-- BEGIN email --> 
+              <tr> 
+                <td class="titleText">{lang_email}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{email}</td> 
+              </tr> 
+              <!-- END email --> 
+              <!-- BEGIN msn --> 
+              <tr> 
+                <td class="titleText">{lang_msn}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{msn}</td> 
+              </tr> 
+              <!-- END msn --> 
+              <!-- BEGIN aim --> 
+              <tr> 
+                <td class="titleText">{lang_aim}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{aim}</td> 
+              </tr> 
+              <!-- END aim --> 
+              <!-- BEGIN yahoo --> 
+              <tr> 
+                <td class="titleText">{lang_yahoo}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{yahoo}</td> 
+              </tr> 
+              <!-- END yahoo --> 
+              <!-- BEGIN icq --> 
+              <tr> 
+                <td class="titleText">{lang_icq}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{icq}</td> 
+              </tr> 
+              <!-- END icq --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <!-- BEGIN user_logo --> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td colspan="3">{user_logo}</td> 
+              </tr> 
+              <!-- END user_logo --> 
+              <!-- BEGIN admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText" colspan=3>{admin_links}</td> 
+              </tr> 
+              <!-- END admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

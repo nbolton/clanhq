@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>{site_name} - {mod_name}</title>
+<script src="js/misc.js" type="text/javascript" language="javascript"></script>
+<script src="js/functions.js" type="text/javascript" language="javascript"></script>
+<script src="js/overlib.js" type="text/javascript" language="javascript"></script>
+<link rel="stylesheet" href="themes/{theme_id}/default.css" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+{active_iframe} 
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<div style="position:absolute; z-index:1001; visibility: hidden">{preloads}</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" background="themes/{theme_id}/images/main_0_b.gif">
+  <tr height="85">
+    <td align="left" width="100%" valign="top" style="background-repeat: no-repeat; background-image: url(themes/{theme_id}/images/main_0_a.gif)">{clan_logo}</td>
+    <td align="right" width="338" valign="top"><img src="themes/{theme_id}/images/main_0_c.gif" width="338"></td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+  <tr> 
+    <td width="{left_panels_width}" valign="top"> 
+      {left_panels_template}
+    </td>
+    <td width="5" valign="top"><img src="themes/{theme_id}/images/main_1_a_coltops.gif" width="5" height="10"></td>
+    <td class=bodyText valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td bgcolor="#3A414C" width="1"></td>
+                <td bgcolor="#29313B"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td height="10" colspan="2" background="themes/{theme_id}/images/centre_0_a.gif"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td rowspan="2" width="10"></td>
+                      <td> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td class="titleText">{navigation}</td>
+                          </tr>
+                          <tr> 
+                            <td height="17"></td>
+                          </tr>
+                        </table>
+                        {subTemplate} </td>
+                      <td rowspan="2" width="10"></td>
+                    </tr>
+                    <tr> 
+                      <td height="10"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td bgcolor="#1A1F26" width="1"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" background="themes/{theme_id}/images/foot_0_b.gif">
+              <tr> 
+                <td align="left"><a href="http://www.clan-hq.com/cms" target="_blank"><img src="themes/{theme_id}/images/foot_0_a.gif" width="113" height="35" border="0"></a></td>
+                <td align="right"><img src="themes/{theme_id}/images/foot_0_c.gif" width="35" height="35"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="20"></td>
+        </tr>
+      </table>
+    </td>
+    <td width="5" valign="top"><img src="themes/{theme_id}/images/main_1_a_coltops.gif" width="5" height="10"></td>
+    <td valign="top" width="{right_panels_width}"> 
+      {right_panels_template}
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

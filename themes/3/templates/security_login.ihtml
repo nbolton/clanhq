@@ -1,0 +1,45 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td> <!-- BEGIN bad_pass --> 
+      <table width=100% border=0 cellspacing=0 cellpadding=0> 
+        <tr> 
+          <td class=titleText>{lang_badpass}</td> 
+        </tr> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+      </table> 
+      <!-- END bad_pass --> </td> 
+  </tr> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_login.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="5"> 
+              <form name="login" method="post" action="?mod=security&action=auth"> 
+                <tr> 
+                  <td class="bodyText">{lang_username}</td> 
+                  <td> <input type="text" name="input[username]" maxlength="255" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_password}</td> 
+                  <td> <input type="password" name="input[password]" maxlength="30" class="formTextbox"> </td> 
+                </tr> 
+                <tr> 
+                  <td colspan="2"> <input type="submit" value="Login" name="submit" class="formButton"> 
+                    <input type="hidden" name="ref" value="{ref}"> </td> 
+                </tr> 
+                <tr> 
+                  <td colspan="2" class="bodyText"><a href="?mod=security&action=forpass">{lang_forgotpass}</a></td> 
+                </tr> 
+              </form> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

@@ -1,0 +1,91 @@
+<!-- BEGIN BuddyOverlibBlock -->
+<div id="buddy_overlib_{blo_buddy_id}" style="position:absolute; visibility: hidden">
+<table border=1 cellspacing=0 cellpadding=5 class=tableDefault>
+  <tr> 
+    <td bordercolor=#000000 class=bodyText> 
+      <table border=0 cellspacing=0 cellpadding=0>
+        <tr>
+          <!-- BEGIN blo_avatar -->
+		  <td><img src=?mod=files&action=getimage&id={blo_avatar_id}></td>
+          <td width=10></td>
+		  <!-- END blo_avatar -->
+          <td class=bodyText>
+            <b>{lang_name}:</b> {blo_buddy}<br>
+            <b>{lang_clan}:</b> {blo_clan_tag} ({blo_clan_tag})<br>
+            <b>{lang_last_action}:</b> {blo_lastaction}<br>
+			{lang_click_now_to_send_message}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- END BuddyOverlibBlock -->
+<!-- BEGIN BuddyListRowBlock --> 
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr> 
+    <td class=titleText colspan=4>{lang_online}</td>
+  </tr>
+  <!-- BEGIN BuddyOnline -->
+  <tr> 
+    <td class=bodyText>
+	  <span class=buddyOver onmouseover="return overlib(buddy_overlib_{bl_buddy_id}.innerHTML);" onmouseout="return nd();" onClick="openBrWindow('?mod=messages&action=compose&buddy_id={bl_buddy_id}','', 'scrollbars=yes,resizable=yes,width=650,height=510')">{bl_buddy}</span></td>
+	<td class=bodyText align=right><a href={bl_external_profile}?mod=members&action=details&id={bl_buddy_id} {bl_new_window} title="{lang_view_profile} ({bl_buddy})"> 
+      <img src=themes/{theme_id}/images/icon_profile.gif border=0 width=9 height=8></a> 
+    </td>
+    <td width=3></td>
+    <form method=post action=?mod=buddy&action=delete>
+      <input type=hidden name=id value={bl_buddy_id}>
+      <input type=hidden name=ref value={this_ref}>
+      <td class=bodyText align=right>
+        <input type=image border=0 src=themes/{theme_id}/images/icon_delete.gif alt="{lang_delete_buddy} ({bl_buddy})" width=9 height=8 onClick="return confirmForm('{lang_delete_item_q}')">
+      </td>
+    </form>
+  </tr>
+  <td height=1></td>
+  <!-- END BuddyOnline -->
+  <tr>
+    <td class=bodyText>{BOnline_subst}</td>
+  </tr>
+  <td height=5></td>
+  <tr> 
+    <td class=titleText colspan=4>{lang_offline}</td>
+  </tr>
+  <!-- BEGIN BuddyOffline -->
+  <tr> 
+    <td class=bodyText>
+	  <span class=buddyOver onmouseover="return overlib(buddy_overlib_{bl_buddy_id}.innerHTML);" onmouseout="return nd();" onClick="openBrWindow('?mod=messages&action=compose&buddy_id={bl_buddy_id}','', 'scrollbars=yes,resizable=yes,width=650,height=510')"> {bl_buddy}</span></td>
+	<td class=bodyText align=right> <a href={bl_external_profile}?mod=members&action=details&id={bl_buddy_id} {bl_new_window} title="{lang_view_profile} ({bl_buddy})"> 
+      <img src=themes/{theme_id}/images/icon_profile.gif border=0 width=9 height=8></a> 
+    </td>
+    <td width=3></td>
+    <form method=post action=?mod=buddy&action=delete>
+      <input type=hidden name=id value={bl_buddy_id}>
+      <input type=hidden name=ref value={this_ref}>
+      <td class=bodyText align=right> 
+        <input type=image border=0 src=themes/{theme_id}/images/icon_delete.gif alt="{lang_delete_buddy} ({bl_buddy})" width=9 height=8 onClick="return confirmForm('{lang_delete_item_q}')">
+      </td>
+    </form>
+  </tr>
+  <td height=1></td>
+  <!-- END BuddyOffline -->
+  <tr>
+    <td class=bodyText>{BOffline_subst}</td>
+  </tr>
+  <tr>
+    <td height=10></td>
+  </tr>
+  <tr>
+    <td class=bodyText>[ <b><a href=?mod=members title="{lang_buddy_members_info}">{lang_members}</a></b> ]</td>
+  </tr>
+</table>
+<!-- END BuddyListRowBlock -->
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td height=5></td>
+  </tr>
+  <tr>
+    <td class=bodyText>[ <b><a href=javascript:; onClick="{buddy_search_window_function}" title="{lang_buddy_search_link_info}">{lang_search}</a></b> ]</td>
+  </tr>
+</table>

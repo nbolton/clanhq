@@ -1,0 +1,26 @@
+  
+ ############################# 
+ # Steps used to upgrade CMS # 
+ # on the Appro server (UK). # 
+ ############################# 
+  
+ 1: Copy needed files over from dev-cms.clan-hq.net to htdocs folder; 
+  
+ 2: Connect to "Server" & cd /www/dev/; 
+  
+ 3: tar cfvz cms_<VERSION>_appro-release.tar.gz htdocs; 
+  
+ 4: mv cms_<VERSION>_appro-release.tar.gz /www/r3n.net/files.r3n.net/private/; 
+  
+ 5: Connect to "Appro" & cd /home/admin/apps/apache/sites/core.cms-hq.co.uk; 
+  
+ 6: wget http://files.r3n.net/private/cms_<VERSION>_appro-release.tar.gz \ 
+    --http-user=appro --http-passwd=**** 
+  
+ 7: Modify upgrade_appro for right version of release (pico upgrade_appro); 
+  
+ 8: pico htdocs/lockfile.upgrade; 
+  
+ 9: php -f upgrade_appro; 
+  
+ 10: mv htdocs/lockfile htdocs/lockfile.upgrade;

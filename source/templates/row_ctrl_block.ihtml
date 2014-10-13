@@ -1,0 +1,56 @@
+<input name="js_rows_changed" type="hidden" value="0">
+<script language="JavaScript">
+<!--
+var rowCount = "{row_count}";
+var formName = "{form_name}";
+
+function setChange() {
+	document.getElementById(formName).js_rows_changed.value = "1"
+}
+
+function generateRows(tableName, rowName, appendRows) {
+  var i;
+  
+  if (!appendRows) {
+    rowCount = 0;
+		addRows = 2;
+  } else {
+    addRows = appendRows;
+  }
+  
+  for (i=0; i < addRows; i++) {
+		rowCount++;
+		document.getElementById(tableName).innerHTML += "<!-- BEGIN LayerRow_" + rowCount + " -->";
+		document.getElementById(tableName).innerHTML += document.getElementById(rowName).innerHTML.replace(/%rowID%/g, rowCount);
+		document.getElementById(tableName).innerHTML += "<!-- END LayerRow_" + rowCount + " -->";
+  }
+}
+
+function deleteRow(rowID, warning) {
+  if (confirm(warning)) {
+    searchPattern = RegExp("<!-- BEGIN LayerRow_"+rowID+" -->(.|\\n)*<!-- END LayerRow_"+rowID+" -->");
+    tableBase.innerHTML = tableBase.innerHTML.replace(searchPattern, '');
+		setChange()
+  }
+}
+
+function restoreTable() {
+  tableBase.innerHTML = tableCache;
+}
+//-->
+</script>
+<div id='tableRow' style="position:absolute; visibility: hidden"> 
+  <!-- BEGIN LayerRow --> 
+  <!-- BEGIN LayerRow_{row_id} --> 
+  <table border="0" cellspacing="0" cellpadding="2"> 
+     <tr> 
+      <td class="titleText">{row_label} {row_id}</td> 
+      <td width='5'></td>
+      <td><input type="text" name="{field_name}[{row_id}]" class="formTextbox" size="{field_width}" maxlength="255" value="{field_value}" onChange="setChange()"></td> 
+      <td width='5'></td>
+      <td><a href='javascript:;' onClick="deleteRow({delete_parameters})"><img src='themes/{theme_id}/images/icon_delete.gif' border='0' alt='{lang_delete_map} ({row_id})'></a></td> 
+    </tr> 
+   </table> 
+  <!-- END LayerRow_{row_id} --> 
+  <!-- END LayerRow --> 
+</div>

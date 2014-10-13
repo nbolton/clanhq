@@ -1,0 +1,42 @@
+ 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault">
+        <tr> 
+          <td class="bodyText"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <!-- BEGIN SortsBlock -->
+                <td class="titleText"><a href="?mod={mod}&action={action}&id={fix_id}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} 
+                  <a href="?mod={mod}&action={action}&id={fix_id}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                  <!---->
+                </td>
+                <!-- END SortsBlock -->
+              </tr>
+              <tr> 
+                <td height=3></td>
+              </tr>
+              <!-- BEGIN RowBlock -->
+              <tr> 
+                <td class="bodyText">{name}</td>
+                <td class="bodyText">{availability}</td>
+                <td class="bodyText">{position}</td>
+                <td class="bodyText">{duration}</td>
+              </tr>
+              <!-- END RowBlock -->
+            </table>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height=15></td>
+              </tr>
+              <tr> 
+                <td class=bodyText>{nav_page_index}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,42 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_about.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height='15'></td> 
+  </tr> 
+  <tr> 
+    <td>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td class="titleText">{lang_tag}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{tag}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_name}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{display}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_born}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{create_date}</td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td height='10'></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText" colspan="3">{info}</td> 
+              </tr> 
+            </table>
+		  </td> 
+        </tr> 
+      </table>
+	</td> 
+  </tr> 
+</table>

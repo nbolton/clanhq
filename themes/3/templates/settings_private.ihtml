@@ -1,0 +1,208 @@
+<script language="JavaScript">
+<!--
+{panels_javascript}
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_private_&.gif"><img src="themes/{theme_id}/images/title_settings.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td>  
+  </tr> 
+  <tr> 
+    <td height='15'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form method="post" action="?mod=settings&action=update_private"> 
+          <tr> 
+            <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="bodyText">{lang_settings_private_info}</td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2" width="100%"> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3">{lang_miscelanious}...</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td width="15"></td> 
+                        <td> <table border="0" cellspacing="0" cellpadding="2"> 
+                            <tr> 
+                              <td class="titleText">{lang_theme}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_theme}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_home}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_home}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_language}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_language}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_select_logo}</td> 
+                              <td width=10></td> 
+                              <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                                  <tr> 
+                                    <td>{select_logo_menu}</td> 
+                                    <td width=10></td> 
+                                    <td>{select_logo_align}</td> 
+                                  </tr> 
+                                </table></td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_server_watch}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_server_menu}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_messages_popup}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_messages_popup}</td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3">{lang_panels}...</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3">
+				  
+				  
+				  <div id='panels' style="position:absolute; z-index:1; visibility: hidden"> 
+                      <!-- BEGIN PanelSettings --> 
+                      <div id='{panel}_panel'> 
+                        <table border="0" cellspacing="0" cellpadding="2"> 
+                          <tr> 
+                            <td></td> 
+                            <td height="7"></td> 
+                            <td></td> 
+                          </tr> 
+                          <tr> 
+                            <td class="titleText" align="center"><a href='javascript:;' onClick="modify_order('%panel_order%', '%panel_side%', 'up')">+</a></td> 
+                            <td class="titleText">{panel_lang}</td> 
+                            <td rowspan="2" class="titleText"><a href='javascript:;' onClick="swap_sides('%panel_order%', '%panel_side%', '%panel_opposite_side%')">%swap_side_icon%</a></td> 
+                          </tr> 
+                          <tr> 
+                            <td class="titleText" align="center"><a href='javascript:;' onClick="modify_order('%panel_order%', '%panel_side%', 'down')">-</a></td> 
+                            <td>{panel_select}</td> 
+                          </tr> 
+                        </table> 
+                        <input name="panel_orders_%panel_side%[%panel_order%]" type="hidden" value="{panel}"> 
+                      </div> 
+                      <!-- END PanelSettings --> 
+                    </div> 
+                     <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+                      <tr> 
+                         <td width="15" valign="top"></td> 
+                         <td><table border="0" cellspacing="0" cellpadding="0"> 
+                             <tr> 
+                              <td valign="top"><div id="panels_output_left"></div></td> 
+                              <td width="40"></td> 
+                              <td valign="top"><div id="panels_output_right"></div></td> 
+                            </tr> 
+                           </table></td> 
+                       </tr> 
+                    </table> 
+                     <div id='temp' style="position:absolute; z-index:1; visibility: hidden"></div> 
+                     <script>build_dropdowns()</script>
+				  </td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3">{lang_avatar_defaults}...</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText" colspan="3"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td width="15"></td> 
+                        <td> <table border="0" cellspacing="0" cellpadding="2" width="100%"> 
+                            <tr> 
+                              <td class="titleText">{lang_news}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_avatar_news}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_comments}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_avatar_comments}</td> 
+                            </tr> 
+                            <tr> 
+                              <td class="titleText">{lang_reports}</td> 
+                              <td width=10></td> 
+                              <td class="bodyText">{select_avatar_reports}</td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table> 
+              <!-- BEGIN admin_settings --> 
+              <table border="0" cellspacing="0" cellpadding="2">  
+                  <td height=10></td> 
+                <tr> 
+                  <td class="titleText" colspan="3">{lang_admin_settings_info}...</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_display_diskspace_in}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText">{select_diskspace_sizetype}</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_display_bandwidth_in}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText">{select_bandwidth_sizetype}</td> 
+                </tr> 
+              </table> 
+              <!-- END admin_settings --> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=10> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td colspan=10 class=bodyText>{lang_chooseabutton}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" name="Input" value="{lang_save_changes_bttn}"
+					  	  onClick="return confirmForm('{lang_save_changes_q}\n{lang_submit_form_br}')"> </td> 
+                        <td width=10></td> 
+                        <td> <input class=formButton type="reset" name="Input" value="{lang_undo_changes_bttn}"
+					  		onClick="return confirmForm('{lang_undo_changes_q}\n{lang_reset_form_br}')"> </td> 
+                      </tr> 
+                    </table> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{ref}"> </td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

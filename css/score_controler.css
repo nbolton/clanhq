@@ -1,0 +1,6 @@
+.scoresTableWidthSelfScore	{ width: 50px; }
+.scoresTableWidthEnemyScore	{ width: 50px; }
+.scoresTableWidthMapName	{ width: 85px; }
+.scoresTableWidthUploadSs	{ width: 155px; }
+.scoresTableSeporator		{ width: 5px; }
+.hiddenLayer { position:absolute; visibility: hidden; }

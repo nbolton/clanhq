@@ -1,0 +1,89 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_servers.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <!-- BEGIN RowBlock --> 
+            <table border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td colspan=2 class=titleText>{name}</td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td><a href="?mod=servers&action=details&id={id}"><img src="{map_image}" width="212" height="160" border="0"></a></td> 
+                <td valign="top"> <table border="0" cellspacing="0" cellpadding="3"> 
+                    <!-- BEGIN name --> 
+                    <tr> 
+                      <td class=titleText>{lang_players}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{players}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText>{lang_map}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{map}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText>{lang_ping}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{ping}</td> 
+                    </tr> 
+                    <!-- BEGIN buddy_list --> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_buddies}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{buddy_list}</td> 
+                    </tr> 
+                    <!-- END buddy_list --> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_platform}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{platform}</td> 
+                    </tr> 
+                    <tr> 
+                      <td class=titleText valign="top">{lang_address}:</td> 
+                      <td width=10></td> 
+                      <td class=bodyText>{address}</td> 
+                    </tr> 
+                  </table> 
+                  <!-- END name --> 
+                  <table border="0" cellspacing="0" cellpadding="2"> 
+                    <tr> 
+                      <td height=9></td> 
+                    </tr> 
+                    <tr> 
+                      <td class=bodyText colspan=3>[ <b><a href="?mod=servers&action=details&id={id}">{lang_details}</a></b> ]</td> 
+                    </tr> 
+                    <!-- BEGIN admin_links --> 
+                    <tr> 
+                      <td height=9></td> 
+                    </tr> 
+                    <tr> 
+                      <td class="bodyText">{admin_links}</td> 
+                    </tr> 
+                    <!-- END admin_links --> 
+                  </table></td> 
+              </tr> 
+              <tr> 
+                <td height=20></td> 
+              </tr> 
+            </table> 
+            <!-- END RowBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

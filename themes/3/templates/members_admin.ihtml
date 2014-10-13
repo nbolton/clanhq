@@ -1,0 +1,96 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_members.gif"><img src="themes/{theme_id}/images/title_&_admin.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td colspan=10 class="bodyText">{lang_members_admin_info}</td> 
+              </tr> 
+              <!-- BEGIN message --> 
+              <tr> 
+                <td height=5></td> 
+              </tr> 
+              <tr> 
+                <td>{message}
+                <td>  
+              </tr> 
+              <!-- END message --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td> <input class=formButton type="button" value="{lang_create_member_bttn}"
+					  	  onClick="goToURL('parent','?mod=members&action=create');return document.MM_returnValue"> </td> 
+              </tr> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+            </table> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <form method="post" action="?mod=members&action=update_multi"> 
+                <tr> 
+                  <td></td> 
+                  <!-- BEGIN SortsBlock --> 
+                  <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="{this_ref}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                    <!----> </td> 
+                  <!-- END SortsBlock --> 
+                </tr> 
+                <tr> 
+                  <td height=3></td> 
+                </tr> 
+                <!-- BEGIN RowBlock --> 
+                <tr {alt_color}> 
+                  <td width="25"> <input type="checkbox" name="item[{m_id}]" value="{m_id}"></td> 
+                  <td class="bodyText">{m_name}</td> 
+                  <td class="bodyText"> <input type="text" name="clan_ord[{m_id}]" tabindex="{m_tabindex}" size="2" class=formTextbox value="{m_clan_ord}"> </td> 
+                  <td class="bodyText">{m_userlevel_info}</td> 
+                  <td class="bodyText">{m_rank_info}</td> 
+                  <td class="bodyText">{m_f_lastaction}</td> 
+                  <td class="bodyText"><a href=?mod=members&action=edit&id={m_id}>{lang_edit}</a></td> 
+                  {m_hide_profile} 
+                  <td class="bodyText"><a href=?mod={mod}&action=details&id={m_id}>{lang_profile}</a> 
+                    <!----> </td> 
+                </tr> 
+                <!-- END RowBlock --> 
+                <tr> 
+                  <td colspan=7 class=bodyText>&nbsp;&nbsp;<img src="themes/{theme_id}/images/arrow_up.gif"> &nbsp;{lang_check_to_delete}</td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=7> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText>{nav_page_index}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=15></td> 
+                      </tr> 
+                    </table> 
+                    <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+                      <tr> 
+                        <td colspan=9 class=bodyText>{lang_select_to_update}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" value="{lang_update_items_bttn}" onClick="return confirmForm('{lang_update_items_q}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </form> 
+            </table> 
+            <!-- END ShowBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

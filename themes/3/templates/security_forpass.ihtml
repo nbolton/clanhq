@@ -1,0 +1,50 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td> <!-- BEGIN bad_email --> 
+      <table width=100% border=0 cellspacing=0 cellpadding=0> 
+        <tr> 
+          <td class=titleText>{lang_emaildosentexist}</td> 
+        </tr> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+      </table> 
+      <!-- END bad_email --> 
+      <!-- BEGIN passemailsent --> 
+      <table width=100% border=0 cellspacing=0 cellpadding=0> 
+        <tr> 
+          <td class=titleText>{lang_passemailsent}</td> 
+        </tr> 
+        <tr> 
+          <td height=15></td> 
+        </tr> 
+      </table> 
+      <!-- END passemailsent --> </td> 
+  </tr> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_forgot_password.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> {lang_email_pass_info}
+            <table border="0" cellspacing="0" cellpadding="5"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{lang_email_address}</td> 
+                <form name="login" method="post" action="?mod=security&action=forpass"> 
+                  <td> <input type="text" name="input[email]" maxlength="255" class="formTextbox"> </td> 
+                  <td colspan="2"> <input type="submit" value="{lang_send_password}" class="formButton"> </td> 
+                  <td> <input type="hidden" name="input[go]" value="1"> </td> 
+                </form> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

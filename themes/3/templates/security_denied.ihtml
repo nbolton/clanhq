@@ -1,0 +1,9 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> {access_denied_info}</td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

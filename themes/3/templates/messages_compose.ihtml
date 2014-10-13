@@ -1,0 +1,95 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_compose.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <!-- BEGIN prefix_info --> 
+            <table border="0" cellspacing="0" cellpadding="0"> 
+              <form method='post' action='?mod=buddy&action=add'> 
+                <tr> 
+                  <td colspan="3" class=bodyText> {buddy_add} {lang_message_name_prefix_info} </td> 
+                </tr> 
+              </form> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+            </table> 
+            <!-- END prefix_info --> 
+            <table border="0" cellspacing="0" cellpadding="0"> 
+              <form method="post" action="?mod=messages&action=send"> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td> <table border="0" cellspacing="0" cellpadding="2"> 
+                            <tr> 
+                              <td class="bodyText" valign="top"><b>{lang_recipients}</b><br> 
+                                <br> 
+                                {lang_recipients_info}</td> 
+                              <td width="10"></td> 
+                              <td class="bodyText">{recipients_list} </td> 
+                            </tr> 
+                          </table></td> 
+                        <td width="20">&nbsp;</td> 
+                        <td> <table border="0" cellspacing="0" cellpadding="2"> 
+                            <tr> 
+                              <td class="bodyText" valign="top"><b>{lang_carbon_copy}</b><br> 
+                                <br> 
+                                {lang_carbon_copy_info}</td> 
+                              <td width="10"></td> 
+                              <td class="bodyText">{carbon_copy_list} </td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                    </table> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                            <tr> 
+                              <td class="titleText">{lang_title}</td> 
+                              <td width=20></td> 
+                              <td> <input type="text" name="title" class="formTextbox" size="40" value="{title}"> </td> 
+                            </tr> 
+                          </table></td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td class="titleText">{lang_your_message_here}...</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=5></td> 
+                      </tr> 
+                      <tr> 
+                        <td class="bodyText"> <textarea name="body" cols="60" rows="10" class="formTextboxMulti">{body}</textarea> </td> 
+                      </tr> 
+                      <tr> 
+                        <td height=5></td> 
+                      </tr> 
+                      <tr> 
+                        <td class=titleText>{lang_save_copy_of_message}
+                          <input type="checkbox" name="save" value="1"> </td> 
+                      </tr> 
+                      <tr> 
+                        <td height=5></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input type="hidden" name="ref" value="{reply_ref}"> 
+                          <input class=formButton type="submit" value="{lang_send}" onClick="return confirmForm('{lang_confirm_send_message}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </form> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

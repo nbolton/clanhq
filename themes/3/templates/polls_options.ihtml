@@ -1,0 +1,60 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN PollShowBlock --> 
+  <form method="post" action="?mod=polls&action=vote"> 
+    <!-- BEGIN poll_title --> 
+    <tr> 
+      <td class="titleText">{poll_title}</td> 
+    </tr> 
+    <tr> 
+      <td height=7></td> 
+    </tr> 
+    <!-- END poll_title --> 
+    <!-- BEGIN poll_info --> 
+    <tr> 
+      <td class="bodyText">{poll_info}</td> 
+    </tr> 
+    <!-- END poll_info --> 
+    <tr> 
+      <td> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <!-- BEGIN PollRowBlock --> 
+          <tr> 
+            <td height=7></td> 
+          </tr> 
+          <tr> 
+            <td width=1> <input type="radio" name="option" value="{poll_opt_id}"> </td> 
+            <td width=7></td> 
+            <td class="bodyText">{poll_opt}</td> 
+          </tr> 
+          <!-- END PollRowBlock --> 
+        </table></td> 
+    </tr> 
+    <tr> 
+      <td height=7></td> 
+    </tr> 
+    <tr> 
+      <td> <table border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td>
+			  <input type="submit" value="Vote!" class="formButton" name="submit"> 
+              <input type="hidden" name="id" value="{poll_id}">
+              <input type="hidden" name="ref" value="{this_ref}">
+			</td> 
+            <td width=10></td> 
+            <td class="bodyText">[ <a href=?mod=polls&action=details&id={poll_id}><b>Details</b></a> ]</td> 
+          </tr> 
+        </table></td> 
+    </tr> 
+  </form> 
+  <tr> 
+    <td height=7></td> 
+  </tr> 
+  <form method="post" action="{this_ref}"> 
+    <tr> 
+      <td>
+	    <input type="submit" value="Results" class="formButton"> 
+        <input type="hidden" name="spr" value="1">
+	  </td> 
+    </tr> 
+  </form> 
+  <!-- END PollShowBlock --> 
+</table>

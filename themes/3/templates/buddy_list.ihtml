@@ -1,0 +1,76 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+  <tr> 
+    <td bordercolor="#000000"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td> <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+              <tr> 
+                <td class="bodyText">{lang_buddy_list_info}</td> 
+              </tr> 
+              <tr> 
+                <td height="10"></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{lang_you_searched_for}: <b>{query}</b><br> 
+                  <a href=?mod=buddy&action=search>{lang_new_search}</a></td> 
+              </tr> 
+              <tr> 
+                <td height="10"></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">
+				<!-- BEGIN ResultsBlock --> 
+                <!-- BEGIN RefineBlock --> 
+                  <table border="0" cellspacing="0" cellpadding="0"> 
+                    <form method="post" action="?mod=buddy&action=list"> 
+                      <tr> 
+                        <td class="titleText">{lang_refine_search}: </td> 
+                        <td width=10></td> 
+                        <td> <input type="text" name="input[query_refine]" value="{refine}" class="formTextbox" size="20"> </td> 
+                        <td width=10></td> 
+                        <td> <input type="hidden" name="input[query]" value="{query}"> 
+                          <input class=formButton type="submit" value="{lang_go}!"> </td> 
+                      </tr> 
+                    </form> 
+                    <tr> 
+                      <td height=10></td> 
+                    </tr> 
+                  </table> 
+                  <!-- END RefineBlock --> 
+                  <table border="0" cellspacing="0" cellpadding="3" width="100%"> 
+                    <tr class="titleText"> 
+                      <!-- BEGIN SortsBlock --> 
+                      <td class="titleText"><a href="{this_ref}&input[query]={query}&input[query_refine]={query_refine}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="{this_ref}&input[query]={query}&input[query_refine]={query_refine}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                        <!----> </td> 
+                      <!-- END SortsBlock --> 
+                    </tr> 
+                    <!-- BEGIN RowBlock --> 
+                    <tr class="bodyText"> 
+                      <td>{name}</td> 
+                      <td>{clan_tag}</td> 
+                      <td>{clan_name}</td> 
+                      <td align=right>{buddy}</td> 
+                    </tr> 
+                    <!-- END RowBlock --> 
+                  </table> 
+                  <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td height=15></td> 
+                    </tr> 
+                    <tr> 
+                      <td class=bodyText>{nav_page_index}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=15></td> 
+                    </tr> 
+                    <tr> 
+                      <td class=bodyText><a href=?mod=buddy&action=search>{lang_new_search}</a></td> 
+                    </tr> 
+                  </table> 
+                  <!-- END ResultsBlock -->
+				</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

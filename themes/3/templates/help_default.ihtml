@@ -1,0 +1,9 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+  <tr> 
+    <td bordercolor="#000000" class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+        <tr> 
+          <td class="titleText">{info}</td> 
+        </tr> 
+      </table> 
+  </tr> 
+</table>

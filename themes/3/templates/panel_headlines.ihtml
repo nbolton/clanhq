@@ -1,0 +1,14 @@
+<!-- BEGIN HeadlinesRowBlock --> 
+<table border=0 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td class=titleText title="{hl_alt}"><a href=?mod=news&action=details&id={hl_id}>{hl_title}</a></td>
+  </tr>
+  <tr> 
+    <td class=bodyText><a href=?mod=members&action=details&id={hl_create_id}>{hl_author}</a> 
+      ({hl_date})</td>
+  </tr>
+  <tr>
+    <td height=3></td>
+  </tr>
+</table>
+<!-- END HeadlinesRowBlock -->

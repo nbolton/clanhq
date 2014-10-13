@@ -1,0 +1,57 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_account_info.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class=bodyText>{lang_account_default_info}</td> 
+              </tr> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class="titleText">{lang_diskspace_used}:</td> 
+                <td rowspan="8" width="10"></td> 
+                <td class="bodyText">{diskspace_used} {diskspace_sizetype}</td> 
+                <td rowspan="8" width="10"></td> 
+                <td class="bodyText">({diskspace_used_percent}%)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_diskspace_left}:</td> 
+                <td class="bodyText">{diskspace_left} {diskspace_sizetype}</td> 
+                <td class="bodyText">({diskspace_left_percent}%)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_diskspace_limit}:</td> 
+                <td class="bodyText">{diskspace_limit} {diskspace_sizetype}</td> 
+              </tr> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_bandwidth_used}:</td> 
+                <td class="bodyText">{bandwidth_used} {bandwidth_sizetype}</td> 
+                <td class="bodyText">({bandwidth_used_percent}%)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_bandwidth_left}:</td> 
+                <td class="bodyText">{bandwidth_left} {bandwidth_sizetype}</td> 
+                <td class="bodyText">({bandwidth_left_percent}%)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_bandwidth_limit}:</td> 
+                <td class="bodyText">{bandwidth_limit} {bandwidth_sizetype}</td> 
+              </tr> 
+            </table> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

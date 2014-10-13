@@ -1,0 +1,626 @@
+*				 						*
+*				=====================				*
+*				+  Clan-HQ.com CMS  +				*
+*				+ Project CHANGELOG +				*
+*				=====================				*
+*										*
+
+===============================
++ 4.7.7 + ( Current )
+===============================
+> Improved way poll results are show; now looks more astheticly pleasing when
+  the bars or string lentgh is shorter or longer than expected.
+> Bugfix: Results and vote buttons for poll panel now POST an extra var to the
+  current page to make it swap between results and vote.
+> Bugfix: The getimage action in the files module low accounts for bandwidth       usage when loading cached images.
+> Bugfix: When an admin modifies a member's profile and dosen't change the
+  userlevel, the old access protocol is now retained.
+> Small caching feature implemeted to speed up downloading of smaller files
+  such as avatars and logos. Note: ONLY works for 'getimage' action.
+> Source structure all moved into one folder / SQL archives nolonger kept
+  on public dev website.
+> Users are now able to customize where panels appear on their screen.
+> Panels can now be placed either side of the screen in any order, as set by the
+  theme configuration file.
+> Minor security rules added to stop bots/crawlers from causing spam in the 
+  admin's inbox because of disabled websites.
+> Page limiter depreciated on global and private settings pages; in the future,
+  users will be able to be more specific to each module.
+> Depreciated advanced security protocol editor to improve scalability with
+  templates.
+
+===============================
++ 4.6.5 + ( Released 07/01/03 )
+===============================
+> Cleaned up unused tags / blocks in templates to improve scalability.
+> Depreciated print page feature to make templates more dynamic and less
+  dependent on unused features.
+> Merged a huge number of sql queries to make system more efficient.
+> Security/module coding structure seporated to improve scalability.
+> If no birthdate is added on member's profile, then instead of todays date
+  being used as default, no date is now used, making the field hidden on their
+  profile.
+> Buddies are now nolonger re-counted in server details and server watch,
+  used to show multiple buddies in the list and incorrect buddy count.
+> When errors are generated on CMS, the admin is now emailed a full detail
+  of the server vars associated with the client which triggered the error.
+> Fixed minor bug where 1 item is always accidentaly deleted when using the
+  re-arrange order feature on the members and servers admins.
+> Email function is nolonger HTML by default, and admin email address is never
+  revieled to the public (this is taken over by support_email).
+> Improved error reporting; now informs admin of all errors caused in the
+  modules.php script.
+> The latest feature which enables the user to add and remove poll options
+  without having to change the page needs all the options to be deleted upon
+  updating the poll. This makes it so all votes cast so far are valid as the
+  option which they voted for now has a different ID. To solve this, all votes
+  cast are deleted when a poll is edited. The user is not warned of this yet!
+
+=============== 
++ 4.5.5 + ( Released 19/12/03 )
+===============
+> Implemented row controler in the Polls module (edit and create actions).
+> Map controler converted to a row controler, so it can be used across
+  multiple modules / templates.
+> Map controler now fully implemented in the fixtures module under the create
+  and edit actions. The script used for this is almost identical to that of
+  the scores controler used on the results module - will consider merging them.
+> SQL date format function now supports hours, minutes and seconds.
+> Fixtures controler class now installed in the fixtures module which handles
+  both inserting and updating fixtures.
+> Clan selector is now a global block that can be used in any module.
+> Scores controler table layout improved for better compatability with long
+  filenames in the 'Select Screenshot' dropdown box.
+
+=============== 
++ 4.5.0 + ( Released 16/12/03 )
+===============
+> Results module now has a combined insert and update action to cut down
+  on future development time; scores are removed then re-added upon updating
+  the result to maintain a clean database.
+> On results module in the create & edit utilities, scores are now modified
+  using JavaScript, and when the user selects a clan from the CMS database,
+  the custom   fields are hidden to make it more clear what's going on.
+> File download redirection now modifed so it can be easily turned on and off.
+> Feature for adding new buddies is now implemented in the compose message
+  facility to improve user-friendliness.
+> CMS accounts can now be disabled via the 'enabled' var in the 'clans' table.
+> If user attempts to upload a file which exceeds their filesize or diskspace
+  limit, instead of sending the user back to the create/edit page, it will
+  now send them back to the admin page so an error message may be shown.
+> Config array now cleaned before parsed onto templates as it contains an
+  element of sensitive information.
+
+=============== 
++ 4.3.4 + ( Released 25/11/03 )
+===============
+> Streamlined "FileServer" integration; now fileserver only needs crucial
+  files and can update the bandwidth usage back on the core server.
+> Applied a more constant date/time format which is now has the potential
+  to be customized by the user (needs further implementation).
+> Fixed non-common create_date variable for news->details, templates were
+  refering to it's old varable (date).
+> Tidied up poll SQL queries; now each query is safely assigned to it's own
+  variable, so that within loops, each query dosen't intefere with the others.
+> Dual database system introduced; files are now stored on a remote server
+  if specified, and redirect script now directs the user to that server.
+> Now directs user to appropriate server depending on the nature of the
+  query; files come from RackShack, core files come from Appro.
+> Configuration files re-arranged for added extensibility; server_conf now
+  uses and array, this array is then merged with the main cfg array later on.
+> Database failure now hidden for user for added CMS security, unless CMS is
+  on the dev server, in which all the error details are shown.
+
+=============== 
++ 4.0.5 DELTA + ( Released 11/11/03 )
+===============
+> When a member is deleted, they may leave behind objects such as news
+  and comments, etc; "Uknown Author" is now shown instead of the name, and
+  the hyperlink to their profile is ommitted.
+> All PathFinders fully completed & tested for bugs.
+> The module used in the "messages" returned from when modifications are
+  made to the user's CMS can now be overridden by putting the module id,
+  followed by a semi-colon, then the message id (i.e. &msg=9;ds).
+> If a member is removed and buddy list removal fails, all the subsiquent 
+  buddy lists they have been added to will return an error because the member
+  dosen't exist! This did return a MySQL error but, this has been fixed so
+  only "n/a" shows up on the page.
+> All delete actions in all modules updated; now stricktly, says "updated" if
+  an item / group of items have been updated. If one item has been deleted
+  it displays the sigular message and for more than one, displays plural.
+> PathFinder support now for "edit" actions improved; now detects if the user
+  came from site's front end or admin end and displays the correct path.
+> Instead of template specifying an action is from an admin page, function
+  now stats what the last action was in the HTTP_REFERER string; this feature
+  is used in PathFinder to determine what path to show (normal or admin).
+> Permenant support for multi-tier PathFinders implemented in comments admin. 
+> Pathfinder for "Results > Reports > Comments" fully implemented. 
+> Added fallback lockfile in database, incase shell access disabled on server. 
+> If Comment ID or Report ID is corrupt or tampered with, nolonger shows 
+  template error now gives user to "Go back" or contact admin with bug. 
+> Pathfinder for Reports module (Details) modified so that if no title was 
+  provided for the report, uses first 20 chars of the body instead. 
+ 
+=============== 
++ 4.0.4 DELTA + ( Released 31/10/03 ) 
+=============== 
+> Messaging system functionality improved; messages now pop-up regardless 
+  of the "Messages Inbox" panel's status (minimized, maximized or closed), 
+  as the message control page is now always open for logged in users. 
+> PathFinder structure improved for 3rd tier modules (i.e. Results > Reports 
+  > Comments) - now shows full path. Not: Results > Reports > Comments Admin 
+  PathFinder temporarily depreciated for now. 
+> Larger PathFinder structures are now included from a seporate directory 
+  to tidy up / minimize source code within modules. 
+> PathFinder support repaired for Reports module under edit action; type_id 
+  is now used to substitute the parent module's id var. 
+> PathFinder support implemented for Comments module under admin, create and 
+  edit actions for the Fixtures module.
+> Additional graphics (icons) added for the CMS Counter-Strike theme (add/
+  delete/message/linux/windows/etc).
+> Bug in poll module under update; if "enable" is chosen when updating all
+  polls on the system get disabled. Fixed.
+> Corrected flaw in create_poll templates for all themes where field names
+  for title and info were defectively named.
+
+=============== 
++ 4.0.3 DELTA + ( Released 29/10/03 ) 
+=============== 
+> Counter-Strike theme (ID:3) finished / finalized. News details template 
+  now shows comments correctly. Poll graphics added & minimize / maximize / 
+  close buttons completed. 
+> Logo upload feature on Edit Profile now uploads to the correct category 
+  (User Logos instead of Avatars). 
+> PathFinder fully implemented in Comments module with News module support. 
+> PathFinder fully implemented in Reports module with Results module support. 
+ 
+=============== 
++ 4.0.2 DELTA + ( Released 15/09/03 ) 
+=============== 
+> CMS Counter-Strike theme completed as Beta. 
+> If no title and no body for messages, "n/a" is shown as the message title 
+  for the messages panel. 
+> Fixed dependency on magic_quotes_GPC for message copy, GPC is never used 
+  as it's an internal action. 
+> Depreciated Admin module (?mod=admin) - features spread out throughout the 
+  site in erlier versions. 
+> Improved optimisation for reading from files database (cut loading time 
+  by about 3 seconds - 75%). 
+> Implemented PathFinder for: News, Members, Results, Fixtures, Servers, 
+  Files, Polls, Trophies, Reports. 
+> Used PCRE to remove existing controlers for sorting columns in admin 
+  sections for modules. 
+> Poll details now corectly shows the users who voted in complicance with 
+  the DB driver recently implemented. 
+> "Who voted" on Poll details is now built up into an array then imploded 
+  into a string around the comma char (,) instead of concatenating one  
+  string then removing the trailing comma. 
+> go_back() function now removes duplicate occurences of patterns between  
+  the ampersand character (&) - more tidy :) 
+> New go_back() function implemented which uses a number of PCRE patterns 
+  to filter out unwanted chars/patterns in the URL. 
+> Admin menu maximise/minimise/close dropdown menu removed from settings  
+  pages (nolonger used). 
+ 
+=============== 
++ 4.0.1 DELTA + ( Released 29/09/03 ) 
+=============== 
+> Server watch and messages output is now delayed so it doesn’t try to set 
+  the info before the parent page is loaded. 
+> Prefix added to tool-tip for admin icons on main menu, now tells user 
+  which module to lower confusion since it isn’t very clear on some 
+  templates. 
+> Switched to new navigation links system; now links are specifiedby module 
+  to increase efficiency. Left old navigation links system in place to fall 
+  back on. 
+> Admin links function now incorporates the parent if in pub mode. 
+> Alteration to base theme made – all “Go back!” links removed. 
+ 
+=============== 
++ 4.0.0 DELTA + ( Released 14/08/03 ) 
+=============== 
+> Creating a poll only disables other polls for this particular clan 
+  and not others! 
+> If a member’s userlevel is changed, new default security settings 
+  are applied. 
+> $i is now always declared as 0. 
+> “View” link removed from polls browse to increase the amount of space. 
+> Polls info shortened on browser & date format changed to same as news 
+  module. 
+ 
+=============== 
++ 3.9.9 DELTA + ( Never released! ) 
+=============== 
+[28.07.03] 
+> All create / edit forms in all modules now have field descriptions and 
+  an improved layout; module specific Lang files used for each. 
+> Can now sort by ALL columns in all news modules. 
+> Users can now enter a formatted IP Address into create and edit servers; 
+  no more cutting and pasting the port! Port is also shown post fixed to 
+  the IP address on edit. 
+> Results create now shows current time rounded down – 1 hour to avoid 
+  results being created as fixtures. 
+> Fixtures create now shows current time + 1 hour to avoid new fixtures  
+  being created as results. 
+ 
+[27.07.03] 
+> Fixtures and results dates are now shown in a more concise format. 
+> Maps are no-longer repeated on the fixtures page. 
+> Info shown on members admin cut-down to give more space. 
+ 
+[25.07.03] 
+> Members, files and news create / edit forms modified to be more user-friendly. 
+> Added module specific language files to increase efficiency. 
+ 
+[23.07.03] 
+> Clans only view match types for their type of game. 
+> Members module now disallows members with the same name to be created. 
+ 
+=============== 
++ 3.9.8 DELTA + ( Never released! ) 
+=============== 
+[21.07.03] 
+> Order of messages popups reversed (first one sent now comes first). 
+> Polls now uses IP tracking again, as well as cookies. 
+> Quotes can now contain CMSCode, and are stripped of html before treated. 
+> New lines no longer cause JavaScript errors in the messages panel. 
+ 
+[19.07.03] 
+> If a match has only had one score (or more than two scores) entered, and  
+  the clan has ‘individual’ scoring enabled, CMS will revert to ‘total’  
+  scoring (exclusive). 
+> Buddies now sorted by name on buddies menu and by clan on messages compose. 
+> Poll cookie now has global name, should be able to use instead of only IP  
+  tracking. 
+ 
+[18.07.03] 
+> User-names and incoming DB variables now can’t contain any html! 
+ 
+3.9.7 Beta 
+ [17.07.03] 
+> Members create now shows files only from that member’s clan. 
+ 
+[16.07.03] 
+> Bandwidth option settings no-longer shown for non-admins it doesn’t  
+  affect them. 
+> User can now apply the Global settings to their settings entry in the  
+  database. 
+> If the user is an admin, the settings module will explain the difference  
+  between Private settings and Global settings to avoid confusion. 
+> Bandwidth, filesize and disk space limitations revised… now more accurate. 
+ 
+============== 
++ 3.9.7 BETA + ( Released 15/07/03 ) 
+============== 
+[15.07.03] 
+> Browse trophies page now implemented with title/date/image and info features. 
+> Trophies admin (admin/update/insert/edit/create actions) now implemented. 
+> Server page now has “Update” button instead of “Delete”. 
+ 
+[14.07.03] 
+> Privileges editor is slightly more user-friendly. 
+> Better missing file management for admins – now records missing maps in DB. 
+> Main Menu and Admin Menu changed to traditional menu form. 
+> File browser now shows the filesize in KB or MB depending on the filesize. 
+> The “CMS Basic” theme now changed to show the more classic main menu. 
+ 
+[13.07.03] 
+> Added number of views to news module – shown in news browser. 
+> If CMS couldn’t find selected server for server watch, show a link for settings. 
+> Members delete now logs correct ID of deleted member. 
+ 
+============== 
++ 3.9.5 BETA + 
+============== 
+[07.07.03] 
+> Security fix – no sets iFrames if user does not have access. 
+> Added “message popup” feature; users can choose to have it Disabled or have  
+  just one message popup, or all new mail popped up – messages also only popup  
+  once. 
+> Implemented new JavaScript update method in messages panel; messaging system  
+  now works in real-time (updates every minute). 
+ 
+[06.07.03] 
+> Now uses server stats daemon to sort by frags and not PHP. 
+> Server details can now show more than one player with the same score. 
+> Converted server watch from iFrame into set of JavaScript functions for  
+  better flexibility; now updates it’s self without flashing and now uses up  
+  less bandwidth. 
+ 
+[03.07.03] 
+> JavaScript for showing nationality flags on profile editor modified for  
+  compatibility (uses self.flag.innerHTML, instead of flag.innerHTML). 
+ 
+[02.07.03] 
+> Check re-typed password now works perfectly with form confirmation. 
+> Added choose flag feature where flags open in new window and user can pick. 
+ 
+[01.07.03] 
+> Added send-message shortcut to buddy list (can also click on name). 
+> Edit comments feature now lets you view the post date & author’s name. 
+> Visitors can now leave their name in comments. 
+> Scores on Server details pages are now sorted in reverse-order of frags. 
+> Account page now shows usage percentages & changeable sizes (KB/MB/GB). 
+> Bandwidth monitoring system now implemented. 
+> Moved all last result & next fixture HTML out of PHP and into a template. 
+> CMSCode now works in poll module for title and info block. 
+> OverLIB for buddy list now in separate template for easier editing. 
+> Moved all site stats & buddy list HTML from PHP in to a template file. 
+ 
+[30.06.03] 
+> Scores are now set as “n/a” with no colour if no scores or invalid scores
+  entered. 
+> If there is an unknown score, Unknown is added to the bottom of the scores. 
+> ‘Draws’ added to streaks; streaks now calculated perfectly – no longer messes up. 
+> Scores function and outcomes functions optimized & tidied up. 
+> Removed old mysql_error_page function to free up space in functions script. 
+> Made seek_file function more efficient, now checks for the most likely name  first. 
+ 
+ 
+============== 
++ 3.9.0 BETA + 
+============== 
+[30.06.03] 
+> Release day – no more further development for this version. 
+ 
+[29.06.03] 
+> Results & Fixtures create now fills in a URL if it’s already in the fixtures DB. 
+> Find file function now expanded so it’s more flexible – warning emails look better. 
+ 
+[28.06.03] 
+> Files module only shows categories if user has access to any of the files in   them. 
+> Improved player finder on server_watch and servers modules. 
+> If no server has been selected, server watch panel is no longer shown! 
+> Messages compose now resets name prefix before building buddy list. 
+ 
+[27.06.03] 
+> New Password confirmation JavaScript function implemented – detects mismatch! 
+> CSS applied to Forgot Password emails, now shows correct username and links. 
+> Clan tags are now added to buddy list (in messages compose) if not in clan. 
+> FW: RE: or CC: now not added more than once at the start of message! 
+> You can no longer appear on your own buddy list – less confusing for noobs. 
+ 
+[26.06.03] 
+> Buddy list now always shows the “[Search]” link at the bottom. 
+> A few minor security bugs have been fixed; users no longer freeze on first login. 
+ 
+[25.06.03] 
+> Avatars are now pre-loaded for buddy list OverLIB. 
+> OverLIB added to buddy list – now shows avatar, clan and last action. 
+> Corrected send action, so that nothing is done unless a recipient is selected. 
+> Fixed some minor MySQL syntax errors in the fixtures (details) module. 
+> Buddy icons/logos are now checked that they exist, before showing them in posts. 
+> Minor bug fixes and incompatibility issues solved with live servers. 
+ 
+[24.06.03] 
+> Forward (FW) feature added – users can now forward messages to each other. 
+> Now shows users who are not buddies with an asterisk (*) on compose message. 
+> Nobody is now selected by default in the CC list (avoids duplicate messages). 
+> CC list added, can now send a carbon-copy to somebody else on your buddy list. 
+> Move items to Saved folder and Copy items to Saved Folder features implemented. 
+> Number of items in folders now shown at top of messages master. 
+> Delete function only permanently deletes if done from the Recycle Bin. 
+> Save copy function now implemented. 
+ 
+[23.06.03] 
+> If a reply to a message, Re: <title> added to title field. 
+> Inbox now implemented, can now view and delete messages. 
+> On message panel, only the first line of the message is shown – looks tidier. 
+> Reply to now auto selects original sender. 
+> Added “original message” information to bottom of replies. 
+> Read message and Compose message forms & functions now complete.  
+> Message template modified a little; now shows links on top to conserve space. 
+ 
+[22.06.03] 
+> Implemented new MySQL database class – now shows errors in more detail. 
+> Changed structure of ModuleManagement, modules now included on index. 
+ 
+[20.06.03] 
+> OverLIBs on fixtures and results details also fine tuned a little. 
+> Fine tuned overLIB – now shows background colour acc with 5px padding. 
+> Implemented messaging db, side-panel and basic message management system. 
+> Quote turned into signature – but can also be used as normal quote. 
+> CMSCode now works with *all* text on site (i.e. profiles, comments, posts etc). 
+> If IP given on fixtures details matches one in the database, links to server details. 
+> Thanks to overLIB – Image of map now shown when MouseOver map names. 
+> CMSCode now supports IRC links, e.g. [url]irc://server/room[/url]. 
+> CMSCode supports [url], [link], [img] and [email] - the same as most forums. 
+ 
+[19.06.03] 
+> Account module now shows very basic bandwidth and disk space info. 
+> ‘File upload’ restrictions in place, allows or denies depending on plan in db. 
+> Server limitations now in place, checks current against limit. 
+> Global + Private settings – can now disable / enable avatars by default. 
+> Buddy checker optimized: now makes sure the buddy exists before looking. 
+> Deleting members also cleans out buddy list, and private settings. 
+> Game type info added to server details page. 
+> Players now shown as “n/a” if there as been a server error – in server-watch. 
+> Server-watch – added Meta refresh for every 5 mins + a refresh link. 
+> Server-watch now a separate module & is shown in an iFrame so user can refresh. 
+> Buddies online count for server-watch is hidden if user is public. 
+> Text in front of map screenshot now has dark shadow to make text stand out. 
+> Implemented server watch side-panel, only top left of map screenshot shown. 
+ 
+[18.06.03] 
+> Update / insert / delete messages now shown on server browse & details. 
+> Added 5/6 map screenshots (TFC) for use with server module. 
+> Map image on servers browse now links to that server details. 
+> Now searches though player list and highlights player if they are a buddy. 
+> Details page for server shown; additionally shows “info” and list of players. 
+> If qstat couldn’t connect to server, “n/a” info tided up a little. 
+> Displays server operating system (Windows / Linux) based on sv_os. 
+> Now searches server list for buddies on buddy list. 
+> Map picture now shown, along with server name, map and current players. 
+> Added order/priority so users can choose the default order of their servers. 
+> Browser now shows name, current players on server and current map. 
+> PHPQStat (server monitor) installed + re-integrated into the server module. 
+ 
+[17.06.03] 
+> Now shows avatar (optional) & quote on results, reports & all comments pages. 
+> ‘Delete buddy’ on buddy list now returns user to current page (not members mod). 
+> “D” and “A” icons on members page & buddy list changed to graphics. 
+> Page load time & current CMS server load in seconds now shown. 
+> “D” link added to buddies list next-to names to delete. 
+> Added feature to add buddies to or delete buddies from buddies list. 
+> Buddy list sidebar implemented – only basic look for now, with no extra features. 
+> Extensions of private settings – there are now sidebar buttons for min/max/close. 
+> Alt for download graphic now says “View <filename> for images (jpeg/gif). 
+> Alt for download graphic now says “Download <filename>” for files. 
+> Re-sorting columns now keeps current category. 
+> Number of files now shown next to the relevant category. 
+> List of file categories now shown on file browser above file list. 
+ 
+[16.06.03] 
+> Streaks system now works with “total” scoring, not just “individual”. 
+> Streaks system will now take draws into consideration 
+> High score now takes enemy score into consideration. 
+ 
+[15.06.03] 
+> Vote action on poll mod now picks up option ID again ($type_id was bad to use). 
+> Poll now says “no polls in database” instead of parse error (handle poll_ is invalid). 
+> Avatar & text positioning fixed news details (table set to 100% width). 
+> User is now returned to correct page after editing, creating + deleting.  
+> Parsed values with “lang_” are now no longer restored, to increase parse speed. 
+> After 3 days of almost constant development, the kill_block function is now fully
+  working, and is pretty efficient compared to last half-working system. There may  
+  be a few hidden bugs, because some of the modules are not properly adapted yet.  
+> Avatars don’t show on posts & comments if the user doesn’t have an avatar. 
+ 
+[14.06.03] 
+> Background of outcome now shown as red/green/blue depending on outcome. 
+> Local server time now shown in more traditional format. 
+> Advertising text at bottom of templates now made a little smaller. 
+> Began work on a new kill_block feature; now uses caching to store last block. 
+ 
+[13.06.03] 
+> “Upload file” feature on files admin now goes back to admin page. 
+> Poll sidebar now says “nobody” has voted instead of “there are no options”. 
+> “Add option” and “Delete option” for poll are now valid actions in security   system.
+> Developed new kill_block function – was unsuccessful. 
+> All images now hidden for print-view mode (used HidePrint for every image). 
+ 
+[12.06.03] 
+> Language variable now parses without stripping slashes again. 
+> Comments & reports admins sort features now work properly again. 
+> Hides title for reports on results details if title is “n/a”.  
+> All confirmation messages are now properly parsed on admins. 
+> Page indexer now shows correct number of files in admin. 
+> Completed applying new parsing system hide dead variable functions. 
+> Public can now vote with site admin’s permission (see privileges). 
+> More flexible / better security for creating & viewing comments. 
+> Created new security privileges checker which can now restrict access to the poll. 
+> Totally re-developed parsing engine, parses at least 2 times faster than before  
+  because unwanted variables & chunks of templates are ignored all together. 
+ 
+[11.06.03] 
+> Added “none” options to slot register menus on fixtures details. 
+> Can now edit clan info and clan birth date on global settings page. 
+> Sidebars hide/show now fully working. See settings (global and private). 
+> All hidden items are now not parsed, instead of just commented out. 
+> Added streaks (i.e. winning & loosing) – still beta but I think it works. 
+> Added ‘scoring type’ to global settings – choose between ‘individual’ and 'total’. 
+> Decided to remove “unknown” results from stats, and just deducted from total. 
+ 
+[10.06.03] 
+> Can now change “Clan Type” in global settings. 
+> Email password page tidied up a bit, error-icon re-linked. 
+> Member admin sort-by column bug fixed. 
+> Can now upload logo / avatar to member’s profile. 
+> Member Profile now shows user’s avatar and logo. 
+> Files admin now shows category instead of userlevel. 
+> Added members “edit profile” so members can edit own profile. 
+> Members create & edit now include “location” and “class”. 
+> Members details, stops from showing profile for “Public” account. 
+> Members admin now hides “view” for public. 
+> Members update bug fix: now doesn’t screw with access privileges. 
+> Members browse - now sorted into different tables (active/semi/in). 
+ 
+[09.06.03]  
+> Implemented usage of Userlevels in reports (was half completed). 
+> Added View and Preview links to a few of the admin actions. 
+> Page index feature implemented on fixtures slots popup window. 
+> Welcome post is new automatically created when CMS admins make new clan. 
+> Updated a few {ref}s to {this_ref} – better compatibility with reference system. 
+> Can now change public username for polls details page – just for a laugh :) 
+> Auto-disable polls were set to ‘insert’ not ‘update’ in MySQL query – fixed. 
+> Hidden a few n/as in different places around the modules, looks neater now. 
+> Abandoned old Navigation shortcut system, new system defined at end. 
+> Changed cut off characters limit for option positioning on poll results sidebar   to 7. 
+ 
+[08.06.03] 
+> Made a few modifications to structure, config array now in global_conf.php. 
+> Creating / updating poll and choosing “Yes” for enabled stops all other polls. 
+> Public poll voting enabled by default on ‘create poll’ feature. 
+> (Applied in 3.8) MySQL error report now tells me Mod & Action; easier to fix   bugs. 
+> ‘Poll details’ says: “No poll details could be generated.” if no stats are gen’d. 
+> ‘Poll details’ now shows “Visitor” instead of “Public” and doesn’t make   duplicates. 
+> Added 7 pixels of space between options on poll, to make them clearer. 
+> All results that haven’t got scores are shown as “unknown” in match stats. 
+> Match stats now shows 0s instead of just nothing. 
+> SQL date function now makes D or M at least 01 (00 makes the item to screw up). 
+> Default action now adds failsafe “?” char to front of ref URL. 
+> Logo hyperlink changed from home.php to ‘?’ (? is default home). 
+> Indexing system implemented on all modules where necessary. 
+> Poll bug fixed, used to disable voting for members if they have ever voted. 
+> Advanced page indexing implemented can now jump to different pages. 
+> Added beta indexing system to news admin. Only shows go back and forward. 
+ 
+[07.06.03] 
+> Changed “last login” to “rank” on members admin page. 
+> Removed ‘X’ from warning template, looks better without. 
+ 
+[06.06.03] 
+> Deleting members also deletes user’s session to avoid conflicts. 
+> Security Privileges editor implemented. New security system complete! 
+> Reports edit template fixed, now calls body text again. 
+> Admin-Shortcuts on reports details no-longer point to news module. 
+> ‘Post comment!’ button added to bottom of news & reports details. 
+> Can now change clan logo through Global settings module. 
+> Global settings feature now implemented (similar to private settings). 
+> Default module (homepage) now changeable in Private Settings. 
+> Private settings feature now implemented (totally new layout). 
+> Comments (browse / create) links now for each report in reports admin. 
+> Delete items feature in comments takes user back to previous page. 
+> Now shows ‘title of news post’ or ‘title of match’ in comments (navigation). 
+> Fixed ‘Go Back’ link on comments, now takes user back to specific report list. 
+> Updated print CSS style - now formats all text black / Verdana font. 
+ 
+[05.06.03] 
+> Fixed reports admin – wasn’t showing first 40 chars of report. 
+> “Poll details” now calculates votes per day stats, not votes per hour. 
+> Shortened displayed info on Polls (browse) from 200 characters to 50. 
+ 
+[04.06.03] 
+> Print view feature added to all pages. 
+> News preview feature added on admin for News module. 
+> Files admin now has ‘download file’ / ‘view image’ button for previewing. 
+> File-upload feature now in results module for uploading screenshots “on the fly”. 
+> Corrected database table name for screenshot links on Results Details.  
+ 
+[03.06.03] 
+> Poll results (sidebar) – improved text positioning rule. 
+> Match sign-up/register feature.  
+> Fixtures commenting feature. 
+> Detailed fixtures feature (and [details] link on upcoming match sidebar).  
+> Editing content in home module sends user back to correct page.  
+> Results comments no-longer give intermittent parsing errors. 
+ 
+ 
+=============== 
++ 3.8.0 ALPHA + 
+=============== 
+> Improved news commenting.  
+> All create actions no-longer give intermittent parsing errors. 
+> Results reporting & reports commenting.  
+> Poll system (optional public voting).  
+> Improved compatibility with TFC vs. CS result formats.  
+> Improved timeleft countdown (e.g. - now counts down from 60s instead of 30s).  
+> Admin-Shortcuts now added to bottom of each item (Edit, Delete, etc). 
+> Userlevels renamed; 'Public, Member & Admin' are now used.  
+> Added links on admin drop-down menu to improve ease of use.  
+> Name links now go to member profile instead of "mailto:" (send email).  
+> More uniform error & table empty messages.  
+> Email password feature now works! 
+> User & Site Preferences/Settings disabled 
+> Custom security protocols must be edited raw. 
+> Max-filesize of 1 Megabyte per upload restriction. 

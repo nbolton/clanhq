@@ -1,0 +1,84 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_create_&.gif"><img src="themes/{theme_id}/images/title_report.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <form method="post" action="?mod=reports&action=insert"> 
+    <tr> 
+      <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+          <tr> 
+            <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td colspan=7 class="bodyText">{lang_reports_create_info}</td> 
+                </tr> 
+                <tr> 
+                  <td height="10"></td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="titleText"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=titleText>{lang_title} </td> 
+                        <td width="15"></td> 
+                        <td> <input type="text" name="input[title]" class=formTextbox size="30"> </td> 
+                      </tr> 
+                    </table></td> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_report}</td> 
+                </tr> 
+                <tr> 
+                  <td> <textarea name="input[body]" cols="60" rows="15" class="formTextboxMulti"></textarea> </td> 
+                </tr> 
+                <tr> 
+                  <td height=5></td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class="titleText">{lang_avatar}</td> 
+                        <td width=10></td> 
+                        <td class="bodyText">{select_avatar}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <td height=5></td> 
+                <tr> 
+                  <td>{s_userlevel}</td> 
+                </tr> 
+                <tr> 
+                  <td class=bodyText> {lang_who_can_view} </td> 
+                </tr> 
+                <td height=10></td> 
+                <tr> 
+                  <td colspan=8> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td colspan=10 class=bodyText>{lang_chooseabutton}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" name="Input" value="{lang_save_changes_bttn}"
+					  	  onClick="return confirmForm('{lang_save_changes_q}\n{lang_submit_form_br}')"> </td> 
+                        <td width=10></td> 
+                        <td> <input class=formButton type="reset" name="Input" value="{lang_undo_changes_bttn}"
+					  		onClick="return confirmForm('{lang_undo_changes_q}\n{lang_reset_form_br}')"> </td> 
+                      </tr> 
+                    </table> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="type" value="{type}"> 
+                    <input type="hidden" name="ref" value="{last_ref}"> </td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </table></td> 
+    </tr> 
+  </form> 
+  </tr> 
+   </table>

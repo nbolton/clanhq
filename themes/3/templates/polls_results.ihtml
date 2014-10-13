@@ -1,0 +1,84 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN PollShowBlock --> 
+  <!-- BEGIN poll_title --> 
+  <tr> 
+    <td class="titleText">{poll_title}</td> 
+  </tr> 
+  <tr> 
+    <td height=7></td> 
+  </tr> 
+  <!-- END poll_title --> 
+  <!-- BEGIN poll_info --> 
+  <tr> 
+    <td class="bodyText">{poll_info}</td> 
+  </tr> 
+  <tr> 
+    <td height=7></td> 
+  </tr> 
+  <!-- END poll_info --> 
+  <tr> 
+    <td> <!-- BEGIN PollRowBlock --> 
+      <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td height=2></td> 
+        </tr> 
+      </table> 
+      <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td class="bodyText" colspan="3">{poll_opt_big}</td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText" colspan="3" height=2></td> 
+        </tr> 
+        <tr> 
+          <td class="bodyText">{poll_opt_sm}</td> 
+          <td></td> 
+          <td> <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td><img src="themes/{theme_id}/images/poll_s_bar.gif"></td> 
+                      <td width={poll_opt_bar_width} background="themes/{theme_id}/images/poll_m_bar.gif"></td> 
+                      <td><img src="themes/{theme_id}/images/poll_e_bar.gif"></td> 
+                    </tr> 
+                  </table></td> 
+                <td width=10></td> 
+                <td class="bodyText">{poll_opt_percent}</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+        <tr> 
+          <td height=5></td> 
+        </tr> 
+      </table> 
+      <!-- END PollRowBlock --> </td> 
+  </tr> 
+  <!-- BEGIN poll_info_block --> 
+  <tr> 
+    <td height=10></td> 
+  </tr> 
+  <tr> 
+    <td class=bodyText>{lang_poll_sidebar_info}</td> 
+  </tr> 
+  <!-- END poll_info_block --> 
+  <!-- BEGIN poll_vote_link --> 
+  <tr> 
+    <td height=7></td> 
+  </tr> 
+  <form method="post" action="{this_ref}"> 
+    <tr> 
+      <td>
+	    <input type="submit" value="Vote" class="formButton">
+	    <input type="hidden" name="spr" value="0">
+	  </td> 
+    </tr> 
+  </form> 
+  <!-- END poll_vote_link --> 
+  <tr> 
+    <td height=5></td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText">[ <a href=?mod=polls&action=details&id={poll_id}><b>Details</b></a> ]</td> 
+  </tr> 
+  <!-- END PollShowBlock --> 
+</table>

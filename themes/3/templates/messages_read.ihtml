@@ -1,0 +1,64 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td colspan=6>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height=10></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_read_message.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td class="titleText">{lang_title}</td> 
+                <td width="10"></td> 
+                <td class="bodyText">{title}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_from}</td> 
+                <td width="10"></td> 
+                <td class="bodyText">{from} (<a href="http://{clan_url}?mod=members&action=details&id={from_id}" target="_blank">{lang_profile}</a>)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_clan}</td> 
+                <td width="10"></td> 
+                <td class="bodyText">{clan} (<a href="http://{clan_url}" target="_blank">{lang_visit}</a>)</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_received}</td> 
+                <td width="10"></td> 
+                <td class="bodyText">{date}</td> 
+              </tr> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText" colspan=3> {mark_as} // <a href=?mod=messages&action=compose&id={id}>{lang_reply}</a> // <a href=?mod=messages&action=delete&id={id}>{lang_delete}</a> 
+                  <!-- BEGIN message_save --> 
+                  // <a href=?mod=messages&action=save&id={id}>{lang_copy_to_saved}</a> // <a href=?mod=messages&action=save&id={id}&move=1>{lang_move_to_saved}</a> 
+                  <!-- END message_save --> 
+                  // <a href=?mod=messages&action=compose&id={id}&forward=1>{lang_forward}</a> </td> 
+              </tr> 
+            </table> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{body}</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

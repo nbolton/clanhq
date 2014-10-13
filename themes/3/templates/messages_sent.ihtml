@@ -1,0 +1,74 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_sent_items.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <!-- BEGIN message --> 
+              <tr> 
+                <td colspan=6>{message}</td> 
+              </tr> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <!-- END message --> 
+              <tr> 
+                <!-- BEGIN SortsBlock --> 
+                <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="{this_ref}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                  <!----> </td> 
+                <!-- END SortsBlock --> 
+              </tr> 
+              <tr> 
+                <td height=3></td> 
+              </tr> 
+              <form method="post" action="?mod=messages&action=delete"> 
+                <!-- BEGIN RowBlock --> 
+                <tr> 
+                  <td><a href=?mod=messages&action=read&id={id}>{icon}</a></td> 
+                  <td> <input type="checkbox" name="item[{id}]" value="{id}"> </td> 
+                  <td class=bodyText>{from}</td> 
+                  <td class=bodyText>{title}</td> 
+                  <td class=bodyText>{date}</td> 
+                  <td class=bodyText><a href=?mod=messages&action=read&id={id}>{lang_Open}</a></td> 
+                </tr> 
+                <!-- END RowBlock --> 
+                <tr> 
+                  <td></td> 
+                  <td colspan=10 class=bodyText>&nbsp;&nbsp;<img src="themes/{theme_id}/images/arrow_up.gif"> &nbsp;{lang_check_to_delete}</td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=10> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText>{nav_page_index}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=15></td> 
+                      </tr> 
+                    </table> 
+                    <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+                      <tr> 
+                        <td colspan=9 class=bodyText>{lang_select_to_delete}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input class=formButton type="submit" value="{lang_delete_items_bttn}" onClick="return confirmForm('{lang_recycle_items_q}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </form> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

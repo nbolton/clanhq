@@ -1,0 +1,62 @@
+<!-- BEGIN MatchStatsBlock -->
+<table border=0 cellspacing=0 cellpadding=1 width=100%>
+  <!-- BEGIN ms_high_score -->
+  <tr> 
+    <td class=titleText colspan=3>{lang_high_score}...</td>
+  </tr>
+  <tr> 
+    <td colspan=3 class=bodyText>{ms_high_score_info}</td>
+  </tr>
+  <tr> 
+    <td colspan=3 class=bodyText>[ <b><a href="?mod=results&action=details&id={ms_high_score_id}">{lang_details}</a></b> 
+      ]</td>
+  </tr>
+  <tr> 
+    <td height=10></td>
+  </tr>
+  <!-- END ms_high_score -->
+  <td class=titleText colspan=3>{lang_matches}...</td>
+  <tr> 
+    <td class=titleText>{lang_played}</td>
+    <td class=bodyText>{ms_matches_played}</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_won}</td>
+    <td class=bodyText>{ms_matches_won} </td>
+    <td class=bodyText>({ms_matches_won_percent}%)</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_drew}</td>
+    <td class=bodyText>{ms_matches_drew} </td>
+    <td class=bodyText>({ms_matches_drew_percent}%)</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_lost}</td>
+    <td class=bodyText>{ms_matches_lost} </td>
+    <td class=bodyText>({ms_matches_lost_percent}%)</td>
+  </tr>
+  <!-- BEGIN ms_matches_unk -->
+  <tr> 
+    <td class=titleText>{lang_neither}</td>
+    <td class=bodyText>{ms_matches_unk}</td>
+    <td class=bodyText> ({ms_matches_unk_percent}%)</td>
+  </tr>
+  <!-- END ms_matches_unk -->
+  <td height=10></td>
+  <tr> 
+    <td class=titleText colspan=3>{lang_streaks}...</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_wins}</td>
+    <td class=bodyText>{ms_winning_streaks}</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_draws}</td>
+    <td class=bodyText>{ms_drawing_streaks}</td>
+  </tr>
+  <tr> 
+    <td class=titleText>{lang_losses}</td>
+    <td class=bodyText>{ms_losing_streaks}</td>
+  </tr>
+</table>
+<!-- END MatchStatsBlock -->

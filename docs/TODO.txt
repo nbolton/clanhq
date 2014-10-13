@@ -1,0 +1,89 @@
+limits for the panels (i.e. news)
+
+Shaitan says: 
+well when a clan starts paying they can choose from one of our range of templates 
+Shaitan says: 
+basic sites dont get a choose, they get a stock template 
+Shaitan says: 
+their first choice is free 
+Shaitan says: 
+but if they wanna change after that they have to pay 
+Shaitan says: 
+or we can make some of the packages include a free template change once every x months or something 
+Shaitan says: 
+and the clan can switch between their last 5 templates without having to repay 
+Shaitan says: 
+this will mean if they do pay and they dont like it, they aint stuck 
+Shaitan says: 
+also means m8 
+Shaitan says: 
+that clans will want to be always upgrading their templates, like phone ring tones etc etc  
+ 
+ 
+ 
+ 
+ 
+script that sends user to appropriate site depending on their speed 
+ 
+> advanced results statistics  
+> calendar (shows events, results, fixtures)  
+ 
+vary wot is parsed depending on the load 
+ 
+Allow users to subscribe to messaging lists! i.e. file downloads etc. 
+ 
+Personal settings – save message by default… and get read-recipient once opened. 
+ 
+Banner exchange 
+ 
+comprehensive server info – which includes metamod plugins (each in separate records) (we allow them to pick from a dropdown list, and also to add to the list(have to be approvbed))  this way we will have a very comprehensive list of mods in a short space of time, also means peps can search based on this info as well,. also we wanna allow the admins to have a rules description, ie , no tk blah blah, as well as an events description, where they can define things like theme nights with custom maps for example… so just a textfield with a date/time, we could also allow anyone on cms to 'subscribe' the the server and be emailed/notified when a new 'theme' has been setup 
+ 
+ 
+so i think we need potentially different user modes 
+like an intro/basic mode where they get access to only the basic features, mods, and an advanced/normal mode for when they get comfortable with cms 
+otherwise its going to be info overflow for them 
+and the last thing we want, is to spend hours just showing peps around, and for them to forget most of wot u have covered, because its too much to take in 
+so i think a basic and advanced approach would do the trick 
+also means we need loads of tutorials with screen shots and stuff 
+and categorize them 
+so we put them in basic order, then advanced 
+ 
+POLL COMMENTING!!! 
+ 
+Ban list for messaging system – make so users can send a CC as well… also, finish off recycle bin, sent items and saved items. 
+ 
+Aswell as server management system, (extension of cms) – have an ftp function so ppl can upload configs to their ftp from cms. 
+ 
+extension of settings module which lets users edit environment in a wysiwig kinda thing. 
+ 
+Queuing system for downloads  
+ 
+news / reports / fixures details should have limited number of comments per page - i.e. use the page-index feature from the browsers  
+ 
+Come up with preg feature that removes multiple instances of a variable in the ref string. 
+ 
+Implement JavaScript feature to add / remove poll options in the create and edit features on the poll module. 
+ 
+Implement JavaScript feature to add / remove poll maps in the create and edit features in the fixtures & results modules. 
+ 
+Trial system: implement an option so admins can make their CMS show members as “trialists” if they have been registered for less than a certain number of weeks/days. 
+ 
+Need more content on HOME module (not just news). 
+ 
+Need a lot more info on members browser – i.e. Nationality flags etc. 
+ 
+Each user has links (just like maps or poll options work) on their page. 
+ 
+Each user has a diary – to show short messages to the clan – i.e. “away for 2 weeks”. Etc. 
+ 
+Master clan stats page – i.e. cms.clan-hq.net. More active clans will be rewarded by all their info being on the page etc. 
+ 
+At some point, make a “Learn how to use CMS” tutorial! 
+ 
+For file system! $_SERVER['HTTP_REFERRER'], - make sure users cant use anything but cms! 
+ 
+Auto-linking system, where clans can add a page of links – then the name in news posts + profiles etc, is replaced by the link! 
+ 
+Content seacher system 
+ 
+Links for only viewing certain leagues on results page at top –  and put “latest matches” for the current matches 

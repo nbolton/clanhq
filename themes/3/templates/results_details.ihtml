@@ -1,0 +1,148 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_result.gif"><img src="themes/{theme_id}/images/title_&_details.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN ResultsBlock --> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td class="titleText">{lang_clan}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{tag} ({clan})</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_type}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{match_type}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_date}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{date}</td> 
+              </tr> 
+              <tr> 
+                <td class="titleText">{lang_time}</td> 
+                <td width=10></td> 
+                <td class="bodyText">{time}</td> 
+              </tr> 
+              {scores}
+              <!-- BEGIN admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText" colspan=3>{admin_links}</td> 
+              </tr> 
+              <!-- END admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <!-- END ResultsBlock --> 
+</table>
+<!-- BEGIN AllReports --> 
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN HidePrint_1 --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_reports.gif"></td> 
+  </tr> 
+  <!-- END HidePrint_1 --> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+</table>
+<a name="reports"></a> 
+<!-- BEGIN ReportsBlock --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td height=3></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <!-- BEGIN title --> 
+              <tr> 
+                <td class="titleText"><a name="post[{id}]"></a>{title}</td> 
+              </tr> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <!-- END title --> 
+              <tr> 
+                <td class="bodyText"> <!-- BEGIN avatar_id --> 
+                  <img src=?mod=files&action=getimage&id={avatar_id} align="left" vspace="5" hspace="10"> 
+                  <!-- END avatar_id --> 
+                  {body} </td> 
+              </tr> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">[ <b>{author}</b> ] - [ {lang_newsposted} <b>{date}</b> ]{edit}{comment}</td> 
+              </tr> 
+              <!-- BEGIN post_comment --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <form method="post" action="?mod=comments&action=create"> 
+                        <td> <input type="hidden" name="type" value="reports"> 
+                          <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="hidden" name="origin" value="{type}"> 
+                          <input type="hidden" name="origin_id" value="{origin_id}"> 
+                          <input type="submit" value="{lang_postcomment}" class=formButton> </td> 
+                      </form> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- END post_comment --> 
+              <!-- BEGIN quote --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText>{quote}</td> 
+              </tr> 
+              <!-- END quote --> 
+              <!-- BEGIN reports_admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{reports_admin_links}</td> 
+              </tr> 
+              <!-- END reports_admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<table border="0" cellspacing="0" cellpadding="0" height=20> 
+  <tr> 
+    <td></td> 
+  </tr> 
+</table>
+<!-- END ReportsBlock --> 
+<!-- END AllReports -->

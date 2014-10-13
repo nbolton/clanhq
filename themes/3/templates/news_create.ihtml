@@ -1,0 +1,91 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_create_&.gif"><img src="themes/{theme_id}/images/title_news.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form method="post" action="?mod=news&action=insert"> 
+          <tr> 
+            <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="bodyText">{lang_news_create_info}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_title}</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText"> <input type="text" name="input[title]" class="formTextbox" size="40"> </td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_body}</td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText"> <textarea name="input[body]" cols="80" rows="17" class="formTextboxMulti"></textarea> </td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class="titleText">{lang_userlevel}</td> 
+                        <td width=10></td> 
+                        <td>{select_userlevel}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_userlevel_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class="titleText">{lang_avatar}</td> 
+                        <td width=10></td> 
+                        <td class="bodyText">{select_avatar}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_avatar_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=31> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td colspan=10 class=bodyText>{lang_chooseabutton}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" name="Input" value="{lang_save_changes_bttn}"
+					  	  onClick="return confirmForm('{lang_save_changes_q}\n{lang_submit_form_br}')"> </td> 
+                        <td width=10></td> 
+                        <td> <input class=formButton type="reset" name="Input" value="{lang_undo_changes_bttn}"
+					  		onClick="return confirmForm('{lang_undo_changes_q}\n{lang_reset_form_br}')"> </td> 
+                      </tr> 
+                    </table> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{last_ref}"> </td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

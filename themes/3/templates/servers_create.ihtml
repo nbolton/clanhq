@@ -1,0 +1,82 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_create_&.gif"><img src="themes/{theme_id}/images/title_server.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form method="post" action="?mod=servers&action=insert"> 
+          <tr> 
+            <td bordercolor="#000000" class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="bodyText">{lang_servers_create_info}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15>  
+                  <td>  
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_ip}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="text" name="input[ip]" class="formTextbox" size="25"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_ip_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_port}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="text" name="input[port]" class="formTextbox" size="5"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_port_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_type}</td> 
+                </tr> 
+                <tr> 
+                  <td>{server_type}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_info} </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText"> <textarea name="input[info]" cols="50" rows="6" class="formTextboxMulti"></textarea> </td> 
+                </tr> 
+                <td height=15></td> 
+                <tr> 
+                  <td colspan=8> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td colspan=10 class=bodyText>{lang_chooseabutton}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" name="Input" value="{lang_save_changes_bttn}"
+					  	  onClick="return confirmForm('{lang_save_changes_q}\n{lang_submit_form_br}')"> </td> 
+                        <td width=10></td> 
+                        <td> <input class=formButton type="reset" name="Input" value="{lang_undo_changes_bttn}"
+					  		onClick="return confirmForm('{lang_undo_changes_q}\n{lang_reset_form_br}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

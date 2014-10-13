@@ -1,0 +1,87 @@
+{RowController}
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+   
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_edit_&.gif"><img src="themes/{theme_id}/images/title_fixture.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+   
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form name="form" method="post" action="?mod=fixtures&action=update"> 
+          <tr> 
+            <td> {SelectClanBlock}
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="titleText">{lang_match_date}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td title="{lang_day}"> <input type="text" name="day" size="2" maxlength="2" class="formTextbox" value="{day}"> </td> 
+                        <td class="bodyText">&nbsp;/&nbsp;</td> 
+                        <td>{month}</td> 
+                        <td class="bodyText">&nbsp;/&nbsp;</td> 
+                        <td title="{lang_year}"> <input type="text" name="year" size="4" maxlength="4" class="formTextbox" value="{year}"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_match_time}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td title="{lang_hour}"> <input type="text" name="hour" size="2" maxlength="2" class="formTextbox" value="{hour}"> </td> 
+                        <td class="bodyText">&nbsp;:&nbsp;</td> 
+                        <td title="{lang_minuite}"> <input type="text" name="minute" size="2" maxlength="2" class="formTextbox" value="{minute}"> </td> 
+                        <td width=10></td> 
+                        <td class="bodyText">{lang_match_time_help}</td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_players}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> <input type="text" name="players" class="formTextbox" size="5" value="{players}" maxlength="50"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_server}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> <input type="text" name="server" class="formTextbox" size="25" value="{server}"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_match_type}</td> 
+                  <td width=10></td> 
+                  <td class="bodyText"> {type_id_select} </td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+              </table> 
+              <div id='tableBase'> 
+                <div style="position:absolute; visibility: hidden">`</div> 
+                {MapsBlock}</div> 
+              <script>tableCache = tableBase.innerHTML</script> 
+              <table> 
+                <tr> 
+                  <td class="bodyText">{lang_add_map_tip}</td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td> <input class="formButton" type="submit" value="{lang_save_changes_bttn}" onClick="return confirmForm('{lang_save_changes_q}')"> </td> 
+                  <td width=5></td> 
+                  <td> <input class="formButton" type="reset" value="{lang_undo_changes_bttn}" onClick="if(confirmForm('{lang_undo_changes_q}')) { restoreTable(); return true; } else { return false; }" onMouseOut="checkShowCustom()"> </td> 
+                </tr> 
+              </table> 
+              <input type="hidden" name="id" value="{id}"> 
+              <input type="hidden" name="ref" value="{last_ref}"> </td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

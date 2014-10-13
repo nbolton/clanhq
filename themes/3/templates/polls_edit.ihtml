@@ -1,0 +1,106 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_edit_&.gif"><img src="themes/{theme_id}/images/title_poll.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <form method="post" action="?mod=polls&action=update" name="{form_name}"> 
+          <tr> 
+            <td>
+			  {RowController}
+			  <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td class="titleText">{lang_title}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="text" name="title" class="formTextbox" size="46" value="{title}" maxlength="255"> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_title_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_info}</td> 
+                </tr> 
+                <tr> 
+                  <td> <textarea name="info" cols="45" rows="4" class="formTextboxMulti">{info}</textarea> </td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_info_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+              </table> 
+              <div id='tableBase'> 
+                <div style="position:absolute; visibility: hidden">`</div> 
+                {OptionsBlock}
+			  </div>
+              <script>tableCache = tableBase.innerHTML</script> 
+              <table> 
+                <tr> 
+                  <td class="bodyText">{lang_add_option_tip}</td> 
+                </tr> 
+              </table> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_userlevel}</td> 
+                </tr> 
+                <tr> 
+                  <td>{select_userlevel}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_userlevel_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_public_voting}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{allow_pub}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_allow_pub_help}</td> 
+                </tr> 
+                <tr> 
+                  <td height=15></td> 
+                </tr> 
+                <tr> 
+                  <td class="titleText">{lang_enabled}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{enabled}</td> 
+                </tr> 
+                <tr> 
+                  <td class="bodyText">{lang_enabled_help}</td> 
+                </tr> 
+                <tr> 
+                  <td> <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{last_ref}"> </td> 
+                </tr> 
+              </table> 
+              <table border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td height="15"></td> 
+                </tr> 
+                <tr> 
+                  <td><input class=formButton type="submit" value="{lang_save_changes_bttn}" onClick="return confirmForm('{lang_save_changes_q}')"></td> 
+                  <td width="5"></td> 
+                  <td><input class="formButton" type="reset" value="{lang_undo_changes_bttn}" onClick="if(confirmForm('{lang_undo_changes_q}')) { restoreTable(); return true; } else { return false; }"></td> 
+                </tr> 
+              </table></td> 
+          </tr> 
+        </form> 
+      </table></td> 
+  </tr> 
+</table>

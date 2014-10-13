@@ -1,0 +1,90 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_polls.gif"><img src="themes/{theme_id}/images/title_&_admin.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td colspan=10 class="bodyText">{lang_polls_admin_info}</td> 
+              </tr> 
+              <!-- BEGIN message --> 
+              <tr> 
+                <td height=5></td> 
+              </tr> 
+              <tr> 
+                <td>{message}
+                <td>  
+              </tr> 
+              <!-- END message --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td> <input class=formButton type="button" value="{lang_create_polls_bttn}"
+					  	  onClick="goToURL('parent','?mod=polls&action=create');return document.MM_returnValue"> </td> 
+              </tr> 
+            </table> 
+            <form method="post" action="?mod=polls&action=delete"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td></td> 
+                  <!-- BEGIN SortsBlock --> 
+                  <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="?mod={mod}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                    <!----> </td> 
+                  <!-- END SortsBlock --> 
+                </tr> 
+                <tr> 
+                  <td height=3></td> 
+                </tr> 
+                <!-- BEGIN RowBlock --> 
+                <tr {alt_color}> 
+                  <td width="25"> <input type="checkbox" name="item[{id}]" value="{id}"></td> 
+                  <td class="bodyText">{title}</td> 
+                  <td class="bodyText">{creator}</td> 
+                  <td class="bodyText">{levelinfo}</td> 
+                  <td class="bodyText">{date}</td> 
+                  <td class="bodyText"><a href=?mod=polls&action=edit&id={id}>{lang_edit}</a></td> 
+                  <td class="bodyText"><a href=?mod={mod}&action=details&id={id}>{lang_view}</a></td> 
+                </tr> 
+                <!-- END RowBlock --> 
+                <tr> 
+                  <td colspan=10 class=bodyText>&nbsp;&nbsp;<img src="themes/{theme_id}/images/arrow_up.gif"> &nbsp;{lang_check_to_delete}</td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=10> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText>{nav_page_index}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=15></td> 
+                      </tr> 
+                    </table> 
+                    <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+                      <tr> 
+                        <td colspan=9 class=bodyText>{lang_select_to_delete}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" value="{lang_delete_items_bttn}" onClick="return confirmForm('{lang_delete_items_q}')" name="submit"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table> 
+            </form> 
+            <!-- END ShowBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

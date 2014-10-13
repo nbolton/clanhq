@@ -1,0 +1,90 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_members.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="95%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td> <!-- BEGIN ActiveTable --> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                    <tr> 
+                      <td class="titleText" colspan=3>{lang_active}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=3></td> 
+                    </tr> 
+                    <!-- BEGIN ActiveBlock --> 
+                    <tr {alt_color}> 
+                      <td class="bodyText" width="16%">{name}</td> 
+                      <td width="8%">{flag}</td> 
+                      <td class="bodyText" width="17%">{rank}</td> 
+                      <td class="bodyText" align=center width="10%">{status}</td> 
+                      <td class="bodyText" align=right width="15%"><a href=?mod=members&action=details&id={id}>{lang_profile}</a></td> 
+                      <!-- BEGIN add_buddy --> 
+                      <td class="bodyText" width="11%" align=right>{buddy}</td> 
+                      <!-- END add_buddy --> 
+                    </tr> 
+                    <!-- END ActiveBlock --> 
+                  </table> 
+                  <!-- END ActiveTable --> 
+                  <!-- BEGIN SemiTable --> 
+                  <table border="0" cellspacing="0" cellpadding="0">  
+                      <td height=15></td> 
+                  </table> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                    <tr> 
+                      <td class="titleText" colspan=3>{lang_semi_active}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=3></td> 
+                    </tr> 
+                    <!-- BEGIN SemiBlock --> 
+                    <tr {alt_color}> 
+                      <td class="bodyText" width="16%">{name}</td> 
+                      <td width="8%">{flag}</td> 
+                      <td class="bodyText" width="17%">{rank}</td> 
+                      <td class="bodyText" align=center width="10%">{status}</td> 
+                      <td class="bodyText" align=right width="15%"><a href=?mod=members&action=details&id={id}>{lang_profile}</a></td> 
+                      <!-- BEGIN add_buddy --> 
+                      <td class="bodyText" width="11%" align=right>{buddy}</td> 
+                      <!-- END add_buddy --> 
+                    </tr> 
+                    <!-- END SemiBlock --> 
+                  </table> 
+                  <!-- END SemiTable --> 
+                  <!-- BEGIN InactiveTable --> 
+                  <table border="0" cellspacing="0" cellpadding="0">  
+                      <td height=15></td> 
+                  </table> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                    <tr> 
+                      <td class="titleText" colspan=3>{lang_inactive}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=3></td> 
+                    </tr> 
+                    <!-- BEGIN InactiveBlock --> 
+                    <tr {alt_color}> 
+                      <td class="bodyText" width="16%">{name}</td> 
+                      <td width="8%">{flag}</td> 
+                      <td class="bodyText" width="17%">{rank}</td> 
+                      <td class="bodyText" align=center width="10%">{status}</td> 
+                      <td class="bodyText" align=right width="15%"><a href=?mod=members&action=details&id={id}>{lang_profile}</a></td> 
+                      <!-- BEGIN add_buddy --> 
+                      <td class="bodyText" width="11%" align=right>{buddy}</td> 
+                      <!-- END add_buddy --> 
+                    </tr> 
+                    <!-- END InactiveBlock --> 
+                  </table> 
+                  <!-- END InactiveTable --> </td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

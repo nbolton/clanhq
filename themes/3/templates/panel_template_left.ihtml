@@ -1,0 +1,47 @@
+<!-- BEGIN LeftPanelTemplateBlock -->
+ {master_panel_template}
+<!-- END LeftPanelTemplateBlock -->
+<table width=100% border=0 cellspacing=0 cellpadding=3 background="themes/{theme_id}/images/panel_back.gif"> 
+  <tr> 
+    <td> <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td width="6"></td> 
+          <td> <table width="100%" border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td class="bodyText">{load_time}<br> 
+                  CMS {lang_load}: {avg_load}</td> 
+              </tr> 
+            </table></td> 
+          <td width="6"></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/panel_bottom.gif" width="165" height="9"></td> 
+  </tr> 
+</table> 
+<table width=100% border=0 cellspacing=0 cellpadding=3 background="themes/{theme_id}/images/panel_back.gif"> 
+  <tr> 
+    <td> <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td width="6"></td> 
+          <td> <table width="100%" border="0" cellspacing="0" cellpadding="3"> 
+              <tr> 
+                <td class="bodyText">{footnote}</td> 
+              </tr> 
+            </table></td> 
+          <td width="6"></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/panel_bottom.gif" width="165" height="9"></td> 
+  </tr> 
+  <tr> 
+    <td height="20"></td> 
+  </tr> 
+</table> 

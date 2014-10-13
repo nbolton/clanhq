@@ -1,0 +1,163 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <!-- BEGIN message --> 
+  <tr> 
+    <td>{message}</td> 
+  </tr> 
+  <tr> 
+    <td height='17'></td> 
+  </tr> 
+  <!-- END message --> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_news.gif"><img src="themes/{theme_id}/images/title_&_details.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <!-- BEGIN NewsBlock --> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+                    <!-- BEGIN title --> 
+                    <tr> 
+                      <td class="titleText"><a name="post[{id}]"></a>{title}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=15></td> 
+                    </tr> 
+                    <!-- END title --> 
+                    <tr> 
+                      <td class="bodyText"> <!-- BEGIN avatar_id --> 
+                        <img src=?mod=files&action=getimage&id={avatar_id} align="left" vspace="5" hspace="10"> 
+                        <!-- END avatar_id --> 
+                        {body}</td> 
+                    </tr> 
+                    <tr> 
+                      <td height=15></td> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText"> [ <b>{author}</b> ] - [ <b>{create_date}</b> ]{edit}{comment}</td> 
+              </tr> 
+              <!-- BEGIN post_comment --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td> <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <form method="post" action="?mod=comments&action=create"> 
+                        <td> <input type="hidden" name="type" value="{mod}"> 
+                          <input type="hidden" name="id" value="{id}"> 
+                          <input type="hidden" name="ref" value="{this_ref}"> 
+                          <input type="submit" value="{lang_postcomment}" class=formButton> </td> 
+                      </form> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <!-- END post_comment --> 
+              <!-- BEGIN quote --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText>{quote}</td> 
+              </tr> 
+              <!-- END quote --> 
+              <!-- BEGIN admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{admin_links}</td> 
+              </tr> 
+              <!-- END admin_links --> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <!-- END NewsBlock --> 
+  <!-- BEGIN AllComments --> 
+  <tr> 
+    <td> <table border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td height="20"></td> 
+        </tr> 
+        <!-- BEGIN HidePrint_1 --> 
+        <tr> 
+          <td><img src="themes/{theme_id}/images/title_comments.gif"></td> 
+        </tr> 
+        <tr> 
+          <td height="10"></td> 
+        </tr> 
+        <!-- END HidePrint_1 --> 
+      </table> 
+      <!-- BEGIN ComBlock --> 
+      <a name="c{c_id}"></a> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td class="bodyText"> <!-- BEGIN avatar_id --> 
+                  <img src=?mod=files&action=getimage&id={avatar_id} align="left" vspace="5" hspace="10"> 
+                  <!-- END avatar_id --> 
+                  {comments} </td> 
+              </tr> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{c_info}</td> 
+              </tr> 
+              <!-- BEGIN quote --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class=bodyText>{quote}</td> 
+              </tr> 
+              <!-- END quote --> 
+              <!-- BEGIN comment_admin_links --> 
+              <tr> 
+                <td height=15></td> 
+              </tr> 
+              <tr> 
+                <td class="bodyText">{comment_admin_links}</td> 
+              </tr> 
+              <!-- END comment_admin_links --> 
+            </table></td> 
+        </tr> 
+      </table> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="5"> 
+        <tr> 
+          <td height=20></td> 
+        </tr> 
+      </table> 
+      <!-- END ComBlock --> </td> 
+  </tr> 
+  <!-- BEGIN post_comment --> 
+  <tr> 
+    <td height=3></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <form method="post" action="?mod=comments&action=create"> 
+                  <td> <input type="hidden" name="type" value="{mod}"> 
+                    <input type="hidden" name="id" value="{id}"> 
+                    <input type="hidden" name="ref" value="{this_ref}"> 
+                    <input type="submit" value="{lang_postcomment}" class=formButton> </td> 
+                </form> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <!-- END post_comment --> 
+  <!-- END AllComments --> 
+</table>

@@ -1,0 +1,4 @@
+AuthUserFile /etc/clanscape/.htpasswd
+AuthName "Clanscape Admin"
+AuthType Basic
+require valid-user

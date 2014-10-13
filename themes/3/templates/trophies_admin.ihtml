@@ -1,0 +1,91 @@
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img src="themes/{theme_id}/images/title_trophies.gif"><img src="themes/{theme_id}/images/title_&_admin.gif"></td> 
+  </tr> 
+  <tr> 
+    <td height=15></td> 
+  </tr> 
+  <tr> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault"> 
+        <tr> 
+          <td class="bodyText"> <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+              <tr> 
+                <td colspan=10 class="bodyText">{lang_trophies_admin_info}</td> 
+              </tr> 
+              <!-- BEGIN message --> 
+              <tr> 
+                <td height=5></td> 
+              </tr> 
+              <tr> 
+                <td>{message}
+                <td>  
+              </tr> 
+              <!-- END message --> 
+            </table> 
+            <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+              <tr> 
+                <td height=10></td> 
+              </tr> 
+              <tr> 
+                <td> <input class=formButton type="button" value="{lang_create_trophie_bttn}"
+					  	  onClick="goToURL('parent','?mod=trophies&action=create');return document.MM_returnValue"> </td> 
+              </tr> 
+            </table> 
+            <form method="post" action="?mod=trophies&action=delete"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+                <tr> 
+                  <td></td> 
+                  <!-- BEGIN SortsBlock --> 
+                  <td class="titleText"><a href="{this_ref}&s={sort}&d={arrow_dir_a}">{lang_{sort_name}}</a>{hide_{sort}} <a href="?mod={mod}&s={sort}&d={arrow_dir_a}"><img src="themes/{theme_id}/images/dir_arrow_{arrow_dir_b}.gif" border="0"></a> 
+                    <!----> </td> 
+                  <!-- END SortsBlock --> 
+                </tr> 
+                <tr> 
+                  <td height=3></td> 
+                </tr> 
+                <!-- BEGIN RowBlock --> 
+                <tr {alt_color}> 
+                  <td width="25"> <input type="checkbox" name="item[{id}]" value="{id}"></td> 
+                  <td class="bodyText">{title}</td> 
+                  <td class="bodyText"> <input type="text" name="item_order[{id}]" tabindex="{tabindex}" size="2" class=formTextbox value="{priority}"> </td> 
+                  <td class="bodyText">{creator}</td> 
+                  <td class="bodyText">{created}</td> 
+                  <td class="bodyText">{info}</td> 
+                  <td class="bodyText"><a href=?mod=trophies&action=edit&id={id}>{lang_edit}</a></td> 
+                  <td class="bodyText"><a href=?mod=trophies&action=browse#id={id}>{lang_view}</a></td> 
+                </tr> 
+                <!-- END RowBlock --> 
+                <tr> 
+                  <td colspan=9 class=bodyText>&nbsp;&nbsp;<img src="themes/{theme_id}/images/arrow_up.gif">&nbsp;{lang_arrow_delete_tip} </td> 
+                </tr> 
+                <tr> 
+                  <td height=10></td> 
+                </tr> 
+                <tr> 
+                  <td colspan=9> <table border="0" cellspacing="0" cellpadding="0"> 
+                      <tr> 
+                        <td class=bodyText>{nav_page_index}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=15></td> 
+                      </tr> 
+                    </table> 
+                    <table border="0" cellspacing="0" cellpadding="0" width="180"> 
+                      <tr> 
+                        <td colspan=9 class=bodyText>{lang_select_to_delete}</td> 
+                      </tr> 
+                      <tr> 
+                        <td height=10></td> 
+                      </tr> 
+                      <tr> 
+                        <td> <input class=formButton type="submit" value="{lang_update_items_bttn}" onClick="return confirmForm('{lang_update_items_q}')"> </td> 
+                      </tr> 
+                    </table></td> 
+                </tr> 
+              </table> 
+            </form> 
+            <!-- END ShowBlock --> </td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>

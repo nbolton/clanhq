@@ -1,0 +1,40 @@
+{javascript}
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="tableDefault">
+  <tr> 
+    <td bordercolor="#000000"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr> 
+                <td class="bodyText">{lang_buddy_search_info}</td>
+              </tr>
+              <tr> 
+                <td height="10"></td>
+              </tr>
+              <tr> 
+                <td> 
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <form method="post" action="?mod=buddy&action=list">
+                      <tr> 
+                        <td class="titleText">{lang_name}: </td>
+                        <td width="10"></td>
+                        <td> 
+                          <input type="text" name="input[query]" class="formTextbox" size="20">
+                        </td>
+                        <td width="10"></td>
+                        <td> 
+                          <input class="formButton" type="submit" value="{lang_go}!">
+                        </td>
+                      </tr>
+                    </form>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

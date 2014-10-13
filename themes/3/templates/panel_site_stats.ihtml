@@ -1,0 +1,28 @@
+<!-- BEGIN SiteStatsRowBlock --> 
+<table border=0 cellspacing=0 cellpadding=1 width=100%>
+  <tr> 
+    <td class=bodyText>{lang_local_server_time}</td>
+  </tr>
+  <tr> 
+    <td height=5></td>
+  </tr>
+  <tr> 
+    <td class=bodyText>{ss_login_info}</td>
+  </tr>
+  <tr> 
+    <td height=5></td>
+  </tr>
+  <tr> 
+    <td class=bodyText>{lang_otheractiveusers}: <b>{ss_active_users}</b></td>
+  </tr>
+  <tr> 
+    <td class=bodyText>{lang_membersinclan}: <b>{ss_total_users}</b></td>
+  </tr>
+  <tr> 
+    <td height=5></td>
+  </tr>
+  <tr> 
+    <td class=bodyText>[ <b><a href=?mod=members>{lang_details}</a></b> ]</td>
+  </tr>
+</table>
+<!-- END SiteStatsRowBlock -->
