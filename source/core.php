@@ -1,14 +1,14 @@
 <?php
 
  /*---------------------------------------+ 
- | Clan-HQ CMS (Clan Management System)		| 
- | Started: March 03											| 
- | Author: Nick "r3n" Bolton							| 
- | See source/global_conf.php for ver.		| 
+ | Clan-HQ CMS (Clan Management System)	  | 
+ | Started: March 03 2000                 | 
+ | Author: Nick Bolton                    | 
+ | See source/global_conf.php for ver.    | 
  +----------------------------------------+ 
- | index.php - used to load configs,			| 
- | classes, functions, the requested			| 
- | module and the language file.					| 
+ | index.php - used to load configs,      | 
+ | classes, functions, the requested      |
+ | module and the language file.          |
  +---------------------------------------*/ 
 
 $id = 0;
